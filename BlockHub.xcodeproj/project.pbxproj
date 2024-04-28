@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		182CEBD3993A65E9BCE301CA /* Pods_BlockHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7DA287258E5D5073EFFB5B /* Pods_BlockHub.framework */; };
-		3A12CAAD2BDEF9DF00236011 /* testGit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12CAAC2BDEF9DF00236011 /* testGit.swift */; };
 		3A909A282BDEE32C00D824A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A272BDEE32C00D824A9 /* AppDelegate.swift */; };
 		3A909A2A2BDEE32C00D824A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A292BDEE32C00D824A9 /* SceneDelegate.swift */; };
 		3A909A2C2BDEE32C00D824A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A2B2BDEE32C00D824A9 /* ViewController.swift */; };
@@ -43,7 +42,6 @@
 
 /* Begin PBXFileReference section */
 		1A7DA287258E5D5073EFFB5B /* Pods_BlockHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A12CAAC2BDEF9DF00236011 /* testGit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testGit.swift; sourceTree = "<group>"; };
 		3A909A242BDEE32C00D824A9 /* BlockHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A909A272BDEE32C00D824A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A909A292BDEE32C00D824A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 				3A909A382BDEE32D00D824A9 /* Info.plist */,
 				3A909A302BDEE32C00D824A9 /* BlockHub.xcdatamodeld */,
 				3A909A5B2BDEE8F500D824A9 /* LoginView.swift */,
-				3A12CAAC2BDEF9DF00236011 /* testGit.swift */,
 			);
 			path = BlockHub;
 			sourceTree = "<group>";
@@ -419,7 +416,6 @@
 			files = (
 				3A909A2C2BDEE32C00D824A9 /* ViewController.swift in Sources */,
 				3A909A282BDEE32C00D824A9 /* AppDelegate.swift in Sources */,
-				3A12CAAD2BDEF9DF00236011 /* testGit.swift in Sources */,
 				3A909A2A2BDEE32C00D824A9 /* SceneDelegate.swift in Sources */,
 				3A909A5C2BDEE8F500D824A9 /* LoginView.swift in Sources */,
 				3A909A322BDEE32C00D824A9 /* BlockHub.xcdatamodeld in Sources */,
