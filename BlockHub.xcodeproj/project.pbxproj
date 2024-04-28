@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182CEBD3993A65E9BCE301CA /* Pods_BlockHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7DA287258E5D5073EFFB5B /* Pods_BlockHub.framework */; };
 		3A909A282BDEE32C00D824A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A272BDEE32C00D824A9 /* AppDelegate.swift */; };
 		3A909A2A2BDEE32C00D824A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A292BDEE32C00D824A9 /* SceneDelegate.swift */; };
 		3A909A2C2BDEE32C00D824A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A2B2BDEE32C00D824A9 /* ViewController.swift */; };
@@ -17,6 +18,9 @@
 		3A909A422BDEE32E00D824A9 /* BlockHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A412BDEE32E00D824A9 /* BlockHubTests.swift */; };
 		3A909A4C2BDEE32E00D824A9 /* BlockHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A4B2BDEE32E00D824A9 /* BlockHubUITests.swift */; };
 		3A909A4E2BDEE32E00D824A9 /* BlockHubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A4D2BDEE32E00D824A9 /* BlockHubUITestsLaunchTests.swift */; };
+		3A909A5C2BDEE8F500D824A9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A5B2BDEE8F500D824A9 /* LoginView.swift */; };
+		60F8AC388194AA1D80860819 /* Pods_BlockHub_BlockHubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8478788D2662687AB65DB93E /* Pods_BlockHub_BlockHubUITests.framework */; };
+		62E3040A6624710D375F773E /* Pods_BlockHubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64EBC2B059843E9686B74F6 /* Pods_BlockHubTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A7DA287258E5D5073EFFB5B /* Pods_BlockHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A909A242BDEE32C00D824A9 /* BlockHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A909A272BDEE32C00D824A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A909A292BDEE32C00D824A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +56,15 @@
 		3A909A472BDEE32E00D824A9 /* BlockHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A909A4B2BDEE32E00D824A9 /* BlockHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockHubUITests.swift; sourceTree = "<group>"; };
 		3A909A4D2BDEE32E00D824A9 /* BlockHubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockHubUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3A909A5B2BDEE8F500D824A9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		515AE46831AA25D8BB57E378 /* Pods-BlockHub-BlockHubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockHub-BlockHubUITests.debug.xcconfig"; path = "Target Support Files/Pods-BlockHub-BlockHubUITests/Pods-BlockHub-BlockHubUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5EEF6B2DC3C8365512938CCA /* Pods-BlockHub-BlockHubUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockHub-BlockHubUITests.release.xcconfig"; path = "Target Support Files/Pods-BlockHub-BlockHubUITests/Pods-BlockHub-BlockHubUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7E553FA0C017E91FD8E7E28D /* Pods-BlockHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockHub.release.xcconfig"; path = "Target Support Files/Pods-BlockHub/Pods-BlockHub.release.xcconfig"; sourceTree = "<group>"; };
+		8478788D2662687AB65DB93E /* Pods_BlockHub_BlockHubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockHub_BlockHubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		849D87E9B5A1EE59EE437E1C /* Pods-BlockHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockHub.debug.xcconfig"; path = "Target Support Files/Pods-BlockHub/Pods-BlockHub.debug.xcconfig"; sourceTree = "<group>"; };
+		E64EBC2B059843E9686B74F6 /* Pods_BlockHubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockHubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE1CDBBBE0B81CBE4A56A149 /* Pods-BlockHubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockHubTests.release.xcconfig"; path = "Target Support Files/Pods-BlockHubTests/Pods-BlockHubTests.release.xcconfig"; sourceTree = "<group>"; };
+		FED8929FBFB2D65D21B36341 /* Pods-BlockHubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockHubTests.debug.xcconfig"; path = "Target Support Files/Pods-BlockHubTests/Pods-BlockHubTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182CEBD3993A65E9BCE301CA /* Pods_BlockHub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E3040A6624710D375F773E /* Pods_BlockHubTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +88,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60F8AC388194AA1D80860819 /* Pods_BlockHub_BlockHubUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34D096B868C0AC55B8483D8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A7DA287258E5D5073EFFB5B /* Pods_BlockHub.framework */,
+				8478788D2662687AB65DB93E /* Pods_BlockHub_BlockHubUITests.framework */,
+				E64EBC2B059843E9686B74F6 /* Pods_BlockHubTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3A909A1B2BDEE32C00D824A9 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +112,8 @@
 				3A909A402BDEE32E00D824A9 /* BlockHubTests */,
 				3A909A4A2BDEE32E00D824A9 /* BlockHubUITests */,
 				3A909A252BDEE32C00D824A9 /* Products */,
+				903B3A1695E02EA7D4DDCCCA /* Pods */,
+				34D096B868C0AC55B8483D8B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +138,7 @@
 				3A909A352BDEE32D00D824A9 /* LaunchScreen.storyboard */,
 				3A909A382BDEE32D00D824A9 /* Info.plist */,
 				3A909A302BDEE32C00D824A9 /* BlockHub.xcdatamodeld */,
+				3A909A5B2BDEE8F500D824A9 /* LoginView.swift */,
 			);
 			path = BlockHub;
 			sourceTree = "<group>";
@@ -130,6 +160,19 @@
 			path = BlockHubUITests;
 			sourceTree = "<group>";
 		};
+		903B3A1695E02EA7D4DDCCCA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				849D87E9B5A1EE59EE437E1C /* Pods-BlockHub.debug.xcconfig */,
+				7E553FA0C017E91FD8E7E28D /* Pods-BlockHub.release.xcconfig */,
+				515AE46831AA25D8BB57E378 /* Pods-BlockHub-BlockHubUITests.debug.xcconfig */,
+				5EEF6B2DC3C8365512938CCA /* Pods-BlockHub-BlockHubUITests.release.xcconfig */,
+				FED8929FBFB2D65D21B36341 /* Pods-BlockHubTests.debug.xcconfig */,
+				FE1CDBBBE0B81CBE4A56A149 /* Pods-BlockHubTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A909A512BDEE32E00D824A9 /* Build configuration list for PBXNativeTarget "BlockHub" */;
 			buildPhases = (
+				EB4285F770DAF112E941097C /* [CP] Check Pods Manifest.lock */,
 				3A909A202BDEE32C00D824A9 /* Sources */,
 				3A909A212BDEE32C00D824A9 /* Frameworks */,
 				3A909A222BDEE32C00D824A9 /* Resources */,
+				D00431CFAD784876E2E7E6FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A909A542BDEE32E00D824A9 /* Build configuration list for PBXNativeTarget "BlockHubTests" */;
 			buildPhases = (
+				F805825FCC9125A338E61059 /* [CP] Check Pods Manifest.lock */,
 				3A909A392BDEE32E00D824A9 /* Sources */,
 				3A909A3A2BDEE32E00D824A9 /* Frameworks */,
 				3A909A3B2BDEE32E00D824A9 /* Resources */,
@@ -172,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A909A572BDEE32E00D824A9 /* Build configuration list for PBXNativeTarget "BlockHubUITests" */;
 			buildPhases = (
+				237CD1AA3F2DDD6CB7966909 /* [CP] Check Pods Manifest.lock */,
 				3A909A432BDEE32E00D824A9 /* Sources */,
 				3A909A442BDEE32E00D824A9 /* Frameworks */,
 				3A909A452BDEE32E00D824A9 /* Resources */,
+				D61BD4C119AE6780E2D4F2CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,6 +266,8 @@
 				Base,
 			);
 			mainGroup = 3A909A1B2BDEE32C00D824A9;
+			packageReferences = (
+			);
 			productRefGroup = 3A909A252BDEE32C00D824A9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -256,6 +306,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		237CD1AA3F2DDD6CB7966909 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlockHub-BlockHubUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D00431CFAD784876E2E7E6FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlockHub/Pods-BlockHub-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlockHub/Pods-BlockHub-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlockHub/Pods-BlockHub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D61BD4C119AE6780E2D4F2CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlockHub-BlockHubUITests/Pods-BlockHub-BlockHubUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlockHub-BlockHubUITests/Pods-BlockHub-BlockHubUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlockHub-BlockHubUITests/Pods-BlockHub-BlockHubUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB4285F770DAF112E941097C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlockHub-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F805825FCC9125A338E61059 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlockHubTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3A909A202BDEE32C00D824A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -264,6 +417,7 @@
 				3A909A2C2BDEE32C00D824A9 /* ViewController.swift in Sources */,
 				3A909A282BDEE32C00D824A9 /* AppDelegate.swift in Sources */,
 				3A909A2A2BDEE32C00D824A9 /* SceneDelegate.swift in Sources */,
+				3A909A5C2BDEE8F500D824A9 /* LoginView.swift in Sources */,
 				3A909A322BDEE32C00D824A9 /* BlockHub.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +595,7 @@
 		};
 		3A909A522BDEE32E00D824A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 849D87E9B5A1EE59EE437E1C /* Pods-BlockHub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,6 +624,7 @@
 		};
 		3A909A532BDEE32E00D824A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E553FA0C017E91FD8E7E28D /* Pods-BlockHub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -497,6 +653,7 @@
 		};
 		3A909A552BDEE32E00D824A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FED8929FBFB2D65D21B36341 /* Pods-BlockHubTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -517,6 +674,7 @@
 		};
 		3A909A562BDEE32E00D824A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE1CDBBBE0B81CBE4A56A149 /* Pods-BlockHubTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -537,6 +695,7 @@
 		};
 		3A909A582BDEE32E00D824A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 515AE46831AA25D8BB57E378 /* Pods-BlockHub-BlockHubUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -555,6 +714,7 @@
 		};
 		3A909A592BDEE32E00D824A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EEF6B2DC3C8365512938CCA /* Pods-BlockHub-BlockHubUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

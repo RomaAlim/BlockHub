@@ -5,4 +5,10 @@
 //  Created by Ramazan Kalabay on 29.04.2024.
 //
 
-import Foundation
+import UIKit
+import SnapKit
+
+class LoginView: UIView{
+    
+}
+

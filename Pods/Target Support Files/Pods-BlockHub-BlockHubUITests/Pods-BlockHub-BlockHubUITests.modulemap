@@ -1,0 +1,6 @@
+framework module Pods_BlockHub_BlockHubUITests {
+  umbrella header "Pods-BlockHub-BlockHubUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
