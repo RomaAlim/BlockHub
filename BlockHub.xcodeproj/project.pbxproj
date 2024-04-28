@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		182CEBD3993A65E9BCE301CA /* Pods_BlockHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7DA287258E5D5073EFFB5B /* Pods_BlockHub.framework */; };
+		3A1A7D172BDF03A4008D5160 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = 3A1A7D162BDF03A4008D5160 /* Notes */; };
+		3A1A7D222BDF0B99008D5160 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1A7D212BDF0B99008D5160 /* LogInView.swift */; };
+		3A1A7D242BDF0E95008D5160 /* LogInPresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1A7D232BDF0E95008D5160 /* LogInPresentor.swift */; };
+		3A1A7D262BDF0F84008D5160 /* LogInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1A7D252BDF0F84008D5160 /* LogInInteractor.swift */; };
+		3A1A7D282BDF1145008D5160 /* LogInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1A7D272BDF1145008D5160 /* LogInRouter.swift */; };
+		3A1A7D2A2BDF1228008D5160 /* LogInEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1A7D292BDF1228008D5160 /* LogInEntity.swift */; };
 		3A909A282BDEE32C00D824A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A272BDEE32C00D824A9 /* AppDelegate.swift */; };
 		3A909A2A2BDEE32C00D824A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A292BDEE32C00D824A9 /* SceneDelegate.swift */; };
-		3A909A2C2BDEE32C00D824A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A2B2BDEE32C00D824A9 /* ViewController.swift */; };
 		3A909A2F2BDEE32C00D824A9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3A909A2E2BDEE32C00D824A9 /* Base */; };
 		3A909A322BDEE32C00D824A9 /* BlockHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A302BDEE32C00D824A9 /* BlockHub.xcdatamodeld */; };
 		3A909A342BDEE32D00D824A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A909A332BDEE32D00D824A9 /* Assets.xcassets */; };
@@ -18,7 +23,6 @@
 		3A909A422BDEE32E00D824A9 /* BlockHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A412BDEE32E00D824A9 /* BlockHubTests.swift */; };
 		3A909A4C2BDEE32E00D824A9 /* BlockHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A4B2BDEE32E00D824A9 /* BlockHubUITests.swift */; };
 		3A909A4E2BDEE32E00D824A9 /* BlockHubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A4D2BDEE32E00D824A9 /* BlockHubUITestsLaunchTests.swift */; };
-		3A909A5C2BDEE8F500D824A9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A909A5B2BDEE8F500D824A9 /* LoginView.swift */; };
 		60F8AC388194AA1D80860819 /* Pods_BlockHub_BlockHubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8478788D2662687AB65DB93E /* Pods_BlockHub_BlockHubUITests.framework */; };
 		62E3040A6624710D375F773E /* Pods_BlockHubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64EBC2B059843E9686B74F6 /* Pods_BlockHubTests.framework */; };
 /* End PBXBuildFile section */
@@ -42,10 +46,15 @@
 
 /* Begin PBXFileReference section */
 		1A7DA287258E5D5073EFFB5B /* Pods_BlockHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A1A7D162BDF03A4008D5160 /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
+		3A1A7D212BDF0B99008D5160 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		3A1A7D232BDF0E95008D5160 /* LogInPresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPresentor.swift; sourceTree = "<group>"; };
+		3A1A7D252BDF0F84008D5160 /* LogInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInInteractor.swift; sourceTree = "<group>"; };
+		3A1A7D272BDF1145008D5160 /* LogInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRouter.swift; sourceTree = "<group>"; };
+		3A1A7D292BDF1228008D5160 /* LogInEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInEntity.swift; sourceTree = "<group>"; };
 		3A909A242BDEE32C00D824A9 /* BlockHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A909A272BDEE32C00D824A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A909A292BDEE32C00D824A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A909A2B2BDEE32C00D824A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A909A2E2BDEE32C00D824A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A909A312BDEE32C00D824A9 /* BlockHub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BlockHub.xcdatamodel; sourceTree = "<group>"; };
 		3A909A332BDEE32D00D824A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,7 +65,6 @@
 		3A909A472BDEE32E00D824A9 /* BlockHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A909A4B2BDEE32E00D824A9 /* BlockHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockHubUITests.swift; sourceTree = "<group>"; };
 		3A909A4D2BDEE32E00D824A9 /* BlockHubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockHubUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3A909A5B2BDEE8F500D824A9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		515AE46831AA25D8BB57E378 /* Pods-BlockHub-BlockHubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockHub-BlockHubUITests.debug.xcconfig"; path = "Target Support Files/Pods-BlockHub-BlockHubUITests/Pods-BlockHub-BlockHubUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5EEF6B2DC3C8365512938CCA /* Pods-BlockHub-BlockHubUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockHub-BlockHubUITests.release.xcconfig"; path = "Target Support Files/Pods-BlockHub-BlockHubUITests/Pods-BlockHub-BlockHubUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7E553FA0C017E91FD8E7E28D /* Pods-BlockHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockHub.release.xcconfig"; path = "Target Support Files/Pods-BlockHub/Pods-BlockHub.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,9 +113,69 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3A1A7D182BDF0AAC008D5160 /* LogInModule */ = {
+			isa = PBXGroup;
+			children = (
+				3A1A7D1E2BDF0B27008D5160 /* Router */,
+				3A1A7D1D2BDF0B1E008D5160 /* Entity */,
+				3A1A7D1C2BDF0B0A008D5160 /* Interactor */,
+				3A1A7D1B2BDF0AF6008D5160 /* Presenter */,
+				3A1A7D1A2BDF0AE6008D5160 /* View */,
+			);
+			path = LogInModule;
+			sourceTree = "<group>";
+		};
+		3A1A7D192BDF0ABB008D5160 /* SignUpModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUpModule;
+			sourceTree = "<group>";
+		};
+		3A1A7D1A2BDF0AE6008D5160 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A1A7D212BDF0B99008D5160 /* LogInView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A1A7D1B2BDF0AF6008D5160 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3A1A7D232BDF0E95008D5160 /* LogInPresentor.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3A1A7D1C2BDF0B0A008D5160 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				3A1A7D252BDF0F84008D5160 /* LogInInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3A1A7D1D2BDF0B1E008D5160 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				3A1A7D292BDF1228008D5160 /* LogInEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		3A1A7D1E2BDF0B27008D5160 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3A1A7D272BDF1145008D5160 /* LogInRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		3A909A1B2BDEE32C00D824A9 = {
 			isa = PBXGroup;
 			children = (
+				3A1A7D162BDF03A4008D5160 /* Notes */,
 				3A909A262BDEE32C00D824A9 /* BlockHub */,
 				3A909A402BDEE32E00D824A9 /* BlockHubTests */,
 				3A909A4A2BDEE32E00D824A9 /* BlockHubUITests */,
@@ -130,15 +198,15 @@
 		3A909A262BDEE32C00D824A9 /* BlockHub */ = {
 			isa = PBXGroup;
 			children = (
+				3A1A7D182BDF0AAC008D5160 /* LogInModule */,
+				3A1A7D192BDF0ABB008D5160 /* SignUpModule */,
 				3A909A272BDEE32C00D824A9 /* AppDelegate.swift */,
 				3A909A292BDEE32C00D824A9 /* SceneDelegate.swift */,
-				3A909A2B2BDEE32C00D824A9 /* ViewController.swift */,
 				3A909A2D2BDEE32C00D824A9 /* Main.storyboard */,
 				3A909A332BDEE32D00D824A9 /* Assets.xcassets */,
 				3A909A352BDEE32D00D824A9 /* LaunchScreen.storyboard */,
 				3A909A382BDEE32D00D824A9 /* Info.plist */,
 				3A909A302BDEE32C00D824A9 /* BlockHub.xcdatamodeld */,
-				3A909A5B2BDEE8F500D824A9 /* LoginView.swift */,
 			);
 			path = BlockHub;
 			sourceTree = "<group>";
@@ -286,6 +354,7 @@
 			files = (
 				3A909A342BDEE32D00D824A9 /* Assets.xcassets in Resources */,
 				3A909A372BDEE32D00D824A9 /* Base in Resources */,
+				3A1A7D172BDF03A4008D5160 /* Notes in Resources */,
 				3A909A2F2BDEE32C00D824A9 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,10 +483,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A909A2C2BDEE32C00D824A9 /* ViewController.swift in Sources */,
+				3A1A7D222BDF0B99008D5160 /* LogInView.swift in Sources */,
+				3A1A7D242BDF0E95008D5160 /* LogInPresentor.swift in Sources */,
+				3A1A7D2A2BDF1228008D5160 /* LogInEntity.swift in Sources */,
+				3A1A7D262BDF0F84008D5160 /* LogInInteractor.swift in Sources */,
 				3A909A282BDEE32C00D824A9 /* AppDelegate.swift in Sources */,
 				3A909A2A2BDEE32C00D824A9 /* SceneDelegate.swift in Sources */,
-				3A909A5C2BDEE8F500D824A9 /* LoginView.swift in Sources */,
+				3A1A7D282BDF1145008D5160 /* LogInRouter.swift in Sources */,
 				3A909A322BDEE32C00D824A9 /* BlockHub.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

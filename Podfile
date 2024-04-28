@@ -7,6 +7,7 @@ target 'BlockHub' do
 
   # Pods for BlockHub
 pod 'SnapKit'
+pod 'Alamofire'
 
   target 'BlockHubTests' do
     inherit! :search_paths

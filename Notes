@@ -1,0 +1,13 @@
+To-do list:
+Architecture VIPER +-
+Wtite a view with SnapKit
+
+
+Ideas:
+Интеграция с Alamofire: Когда ты используешь Alamofire для работы с сетью, создай отдельный класс, который будет отвечать за взаимодействие с API. Этот класс будет использоваться внутри интерактора для выполнения сетевых запросов.
+
+List of completed:
+Installing SnapKit
+Integrate GIT
+First Push
+Install Alomofire
