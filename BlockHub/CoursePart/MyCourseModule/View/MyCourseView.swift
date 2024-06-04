@@ -55,8 +55,8 @@ extension MyCourseView: UITableViewDelegate {
 
 extension MyCourseView: TableViewCellDelegate {
     func didTapCourseInformationButton(cell: TableViewCell) {
-        guard let indexPath = tableView.indexPath(for: cell) else { return }
-        let selectedCourse = courses[indexPath.row]
+//        guard let indexPath = tableView.indexPath(for: cell) else { return }
+//        let selectedCourse = courses[indexPath.row]
         
         // Instantiate and navigate to the AboutCourseView
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -68,8 +68,8 @@ extension MyCourseView: TableViewCellDelegate {
     }
     
     func didTapNextButton(cell: TableViewCell) {
-        guard let indexPath = tableView.indexPath(for: cell) else { return }
-        let selectedCourse = courses[indexPath.row]
+//        guard let indexPath = tableView.indexPath(for: cell) else { return }
+//        let selectedCourse = courses[indexPath.row]
         
         // Instantiate and navigate to the ListOfChaptersView
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

@@ -1,13 +1,13 @@
 //
-//  NewsView.swift
+//  ListAchievsVC.swift
 //  BlockHub
 //
-//  Created by Ramazan Kalabay on 31.05.2024.
+//  Created by Ramazan Kalabay on 05.06.2024.
 //
 
 import UIKit
 
-class NewsView: UIViewController {
+class ListAchievsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

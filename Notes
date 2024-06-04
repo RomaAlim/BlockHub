@@ -1,13 +1,22 @@
+
 To-do list:
-Architecture VIPER +-
-Wtite a view with SnapKit
 
+About news
+Achievements: list of achieve, tableView Achievements
+Add format text: Euclid-circular-a
+QUIZ
+Calendar
+Label gradiaent
 
-Ideas:
-Интеграция с Alamofire: Когда ты используешь Alamofire для работы с сетью, создай отдельный класс, который будет отвечать за взаимодействие с API. Этот класс будет использоваться внутри интерактора для выполнения сетевых запросов.
 
 List of completed:
+
+List Of News
+Profile: Image, email, name, achievement, languages, off push advertisment
+
 Installing SnapKit
 Integrate GIT
 First Push
 Install Alomofire
+Architecture VIPER +-
+Wtite a view with SnapKit

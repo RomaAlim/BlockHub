@@ -36,6 +36,20 @@ class AboutCourseView: UIViewController {
         miniDescription1UI.layer.cornerRadius = 10
         minidescription2UI.layer.cornerRadius = 10
         registrationButtonUI.layer.cornerRadius = 10
+        
+        
+        
+        whatWillLearnField.isEditable = false
+        whatWillLearnField.isSelectable = false
+        whatWillLearnField.isUserInteractionEnabled = false
+        
+        descriptionField.isEditable = false
+        descriptionField.isSelectable = false
+        descriptionField.isUserInteractionEnabled = false
+        
+        learningPlanField.isEditable = false
+        learningPlanField.isSelectable = false
+        learningPlanField.isUserInteractionEnabled = false
     }
     func showRegistrationAlert() {
             let alertController = UIAlertController(title: "Congratulations!", message: "You have successfully registered for the course. It has been added to your favorites.", preferredStyle: .alert)
