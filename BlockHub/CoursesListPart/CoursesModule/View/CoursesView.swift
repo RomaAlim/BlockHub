@@ -9,9 +9,8 @@ import UIKit
 
 class CoursesView: UIViewController {
 
-    
-
     @IBOutlet weak var tableView: UITableView!
+    
     let DateListOfCourse = [
         ListOfCourse(name: "Blockchain BASICS", numberOfLessons: 64, completedLessons: 62, description1: "Introduction to Blockchain", description2: "Basics of Distributed Ledger", cost: "Free", imageName: "ListOfCoursesImage"),
         ListOfCourse(name: "Blockchain ADVANCED", numberOfLessons: 50, completedLessons: 45, description1: "Advanced Blockchain Concepts", description2: "In-depth Ledger Analysis", cost: "Free", imageName: "ListOfCoursesImage"),
@@ -28,9 +27,11 @@ class CoursesView: UIViewController {
         tableView.register(UINib(nibName: "CoursesTableViewCell", bundle: nil), forCellReuseIdentifier: "CoursesTableViewCell")
         tableView.separatorStyle = .none // Убираем стандартные разделители
     }
+    
 }
 
 extension CoursesView: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DateListOfCourse.count
     }
@@ -47,18 +48,27 @@ extension CoursesView: UITableViewDataSource, UITableViewDelegate {
         cell.costListCourses.text = course.cost
         cell.imageViewListCourses.image = UIImage(named: course.imageName)
         
+        cell.delegate = self // Set the delegate
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 400 // Укажите нужную высоту ячейки
     }
-    
-    // Устанавливаем пространство между ячейками через contentInset
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView == tableView {
-            let topInset = scrollView.contentInset.top
-            scrollView.contentInset = UIEdgeInsets(top: topInset, left: 0, bottom: 20, right: 0)
+}
+
+extension CoursesView: CoursesTableViewCellDelegate {
+    func didTapRegisterButton(cell: CoursesTableViewCell) {
+       // guard let indexPath = tableView.indexPath(for: cell) else { return }
+        //let selectedCourse = DateListOfCourse[indexPath.row]
+        
+        // Instantiate and navigate to the AboutCourseView
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let aboutCourseVC = storyboard.instantiateViewController(withIdentifier: "AboutCourseView") as? AboutCourseView {
+            // Pass data to AboutCourseView if needed
+            // aboutCourseVC.course = selectedCourse
+            navigationController?.pushViewController(aboutCourseVC, animated: true)
         }
     }
 }

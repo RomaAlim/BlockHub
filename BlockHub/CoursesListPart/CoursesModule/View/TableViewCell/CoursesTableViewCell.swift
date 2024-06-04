@@ -7,9 +7,9 @@
 
 import UIKit
 
+
 class CoursesTableViewCell: UITableViewCell {
 
-    
     @IBOutlet weak var ViewEdite: UIView!
     @IBOutlet weak var imageViewListCourses: UIImageView!
     @IBOutlet weak var costListCourses: UILabel!
@@ -17,6 +17,8 @@ class CoursesTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionListCourses1: UILabel!
     @IBOutlet weak var descriptionListCourses2: UILabel!
     @IBOutlet weak var registrationButton: UIButton!
+    
+    weak var delegate: CoursesTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +32,9 @@ class CoursesTableViewCell: UITableViewCell {
     }
     
     @IBAction func registrationButtonAction(_ sender: Any) {
+        delegate?.didTapRegisterButton(cell: self)
     }
+    
     private func setupUI() {
         // Округление углов для ViewEdite
         ViewEdite.layer.cornerRadius = 10

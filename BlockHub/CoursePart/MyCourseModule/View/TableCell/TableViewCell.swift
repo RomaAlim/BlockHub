@@ -15,6 +15,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var CourseInformation: UIButton!
     @IBOutlet weak var ProgresView: UIProgressView!
     
+    weak var delegate: TableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,9 +29,11 @@ class TableViewCell: UITableViewCell {
     }
     
     @IBAction func NextButtonAction(_ sender: Any) {
+        delegate?.didTapNextButton(cell: self)
     }
     
     @IBAction func CourseInformationButton(_ sender: Any) {
+       delegate?.didTapCourseInformationButton(cell: self)
     }
     private func setupUI() {
             // Установка зеленого цвета для ProgressView
