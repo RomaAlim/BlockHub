@@ -19,6 +19,7 @@ class AboutCourseView: UIViewController {
     @IBOutlet weak var descriptionField: UITextView!
     @IBOutlet weak var learningPlanField: UITextView!
     @IBOutlet weak var registrationButtonUI: UIButton!
+    @IBOutlet weak var viewColorEditeted: UIView!
     
     
     override func viewDidLoad() {
@@ -33,9 +34,9 @@ class AboutCourseView: UIViewController {
     
     
     func updateUI(){
-        miniDescription1UI.layer.cornerRadius = 10
-        minidescription2UI.layer.cornerRadius = 10
-        registrationButtonUI.layer.cornerRadius = 10
+        miniDescription1UI.layer.cornerRadius = 50
+        minidescription2UI.layer.cornerRadius = 50
+        registrationButtonUI.layer.cornerRadius = 20
         
         whatWillLearnField.isEditable = false
         whatWillLearnField.isSelectable = true
@@ -48,6 +49,13 @@ class AboutCourseView: UIViewController {
         learningPlanField.isEditable = false
         learningPlanField.isSelectable = true
         learningPlanField.isUserInteractionEnabled = true
+        
+        if let gradientColor = UIView.createGradientBackground() {
+            //costListCourses.textColor = gradientColor
+           // registrationButton.setTitleColor(gradientColor, for: .normal)
+            registrationButtonUI.backgroundColor = gradientColor
+            viewColorEditeted.backgroundColor = gradientColor
+        }
 
     }
     func showRegistrationAlert() {

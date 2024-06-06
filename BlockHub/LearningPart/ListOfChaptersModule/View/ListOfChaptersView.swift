@@ -28,7 +28,17 @@ class ListOfChaptersView: UIViewController {
          tableView.dataSource = self
          tableView.delegate = self
          tableView.register(UINib(nibName: "ChaptersTableCell", bundle: nil), forCellReuseIdentifier: "ChaptersTableCell")
+         updateUI()
      }
+    
+    func updateUI(){
+        if let gradientColor = UIView.createGradientBackground() {
+            self.view.backgroundColor = gradientColor
+            nameOfCourseUI.backgroundColor = gradientColor
+        }
+
+
+    }
  }
 
 extension ListOfChaptersView: UITableViewDataSource, UITableViewDelegate {

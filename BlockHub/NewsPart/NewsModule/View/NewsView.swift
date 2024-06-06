@@ -33,8 +33,7 @@ class NewsView: UIViewController{
         tableView.delegate = self
         tableView.register(UINib(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsTableViewCell")
     }
-    
-
+  
 }
 
 extension NewsView: UITableViewDataSource, UITableViewDelegate {
@@ -58,7 +57,12 @@ extension NewsView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Highlight the selected cell (this is default behavior, you can customize if needed)
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+            tableView.deselectRow(at: indexPath, animated: true)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let selectedNewsVC = storyboard.instantiateViewController(withIdentifier: "SelectedNewsVC") as? SelectedNewsVC {
+
+                navigationController?.pushViewController(selectedNewsVC, animated: true)
+            }
+        }
 }

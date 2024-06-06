@@ -6,24 +6,34 @@
 //
 
 import UIKit
+import PDFKit
 
 class SelectedNewsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupPDFViewNews()
     }
     
+    private func setupPDFViewNews() {
+            guard let pdfURL = Bundle.main.url(forResource: "testPDF", withExtension: "pdf") else { return }
+            let pdfDocument = PDFDocument(url: pdfURL)
+            
+            let pdfView = PDFView(frame: view.bounds)
+            pdfView.document = pdfDocument
+            pdfView.autoScales = true
+            
+            view.addSubview(pdfView)
+            
+            // Adjust pdfView frame to exclude the area of the navigation bar
+            pdfView.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                pdfView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+                pdfView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                pdfView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                pdfView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
+        }
+        
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
-}

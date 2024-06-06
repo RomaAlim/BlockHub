@@ -40,6 +40,11 @@ class CompletingViewController: UIViewController {
         description2Field.isEditable = false
         description2Field.isSelectable = true
         description2Field.isUserInteractionEnabled = true
+
+        if let gradientColor = UIView.createGradientBackground() {
+            sectionNameLabel.textColor = gradientColor
+        }
+
     }
     }
 

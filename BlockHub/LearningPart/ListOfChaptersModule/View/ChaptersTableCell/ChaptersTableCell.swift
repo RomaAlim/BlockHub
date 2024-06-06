@@ -11,8 +11,8 @@ class ChaptersTableCell: UITableViewCell {
 
     
     @IBOutlet weak var ViewCornerUI: UIView!
-    @IBOutlet weak var chapterTitleUI: GradientLabel!
-    @IBOutlet weak var progressTextUI: GradientLabel!
+    @IBOutlet weak var chapterTitleUI: UILabel!
+    @IBOutlet weak var progressTextUI: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,9 +33,11 @@ class ChaptersTableCell: UITableViewCell {
 
         // Additional customization (optional)
         ViewCornerUI.layer.masksToBounds = true
-        
-        // Set gradient colors for the labels
-        chapterTitleUI.setGradientColors([UIColor.white, UIColor.link, UIColor.systemPurple])
-        progressTextUI.setGradientColors([UIColor.white, UIColor.link, UIColor.systemPurple])
+    
+        // Применение градиента к тексту someLabel
+        if let gradientColor = UIView.createGradientBackground() {
+            chapterTitleUI.textColor = gradientColor
+        }
+
     }
 }

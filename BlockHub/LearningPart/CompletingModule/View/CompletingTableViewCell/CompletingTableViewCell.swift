@@ -30,10 +30,15 @@ class CompletingTableViewCell: UITableViewCell {
         imageType.image = item.image
         nameTypeLabel.text = item.name
         typleLabel.text = item.type
+        
     }
     
     func updateUI(){
         viewEditedCorner.layer.cornerRadius = 20
-    
+        if let gradientColor = UIView.createGradientBackground() {
+            nameTypeLabel.textColor = gradientColor
+        }
+
     }
+
 }

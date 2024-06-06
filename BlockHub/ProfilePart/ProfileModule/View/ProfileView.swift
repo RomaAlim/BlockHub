@@ -13,6 +13,9 @@ class ProfileView: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileFullNameLabel: UILabel!
     @IBOutlet weak var profileEmailLabel: UILabel!
+    @IBOutlet weak var blueViewEdite: UIView!
+    @IBOutlet weak var lauguagesButtonUI: UIButton!
+    @IBOutlet weak var notifationButtonUI: UIButton!
     
     
     override func viewDidLoad() {
@@ -24,7 +27,13 @@ class ProfileView: UIViewController {
     func updateUI(){
         profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
         profileImageView.clipsToBounds = true
+        if let gradientColor = UIView.createGradientBackground() {
+            blueViewEdite.backgroundColor = gradientColor
+            notifationButtonUI.backgroundColor = gradientColor
+            lauguagesButtonUI.backgroundColor = gradientColor
+        }
     }
+    
     @IBAction func achievementsButtonAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let listAchievsVC = storyboard.instantiateViewController(withIdentifier: "ListAchievsVC") as? ListAchievsVC {

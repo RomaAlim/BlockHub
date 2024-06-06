@@ -52,5 +52,11 @@ class CoursesTableViewCell: UITableViewCell {
         registrationButton.layer.borderWidth = 1
         registrationButton.layer.borderColor = UIColor.link.cgColor
         registrationButton.layer.backgroundColor = UIColor.clear.cgColor
+        
+        if let gradientColor = UIView.createGradientBackground() {
+            costListCourses.textColor = gradientColor
+            registrationButton.setTitleColor(gradientColor, for: .normal)
+        }
+
     }
 }

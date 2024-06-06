@@ -32,47 +32,65 @@ class QuizVC: UIViewController {
          Question(questionText: "What is Proof of Stake?", options: ["A consensus algorithm", "A security measure", "A type of cryptocurrency", "A blockchain"], correctAnswer: 0)
      ]
      
-    var currentQuestionIndex = 0
-       var selectedAnswerIndex: Int?
+        var currentQuestionIndex = 0
+        var selectedAnswerIndex: Int?
     
         override func viewDidLoad() {
             super.viewDidLoad()
             updateUI()
+    
         }
         
     func updateUI() {
-           let currentQuestion = questions[currentQuestionIndex]
-           questionLabel.text = currentQuestion.questionText
-           QuestionLabel1.setTitle(currentQuestion.options[0], for: .normal)
-           QuestionLabel2.setTitle(currentQuestion.options[1], for: .normal)
-           QuestionLabel3.setTitle(currentQuestion.options[2], for: .normal)
-           QuestionLabel4.setTitle(currentQuestion.options[3], for: .normal)
-           
-           // Reset button states
-           resetButtonStates()
-           
-           // Update progress view
-           let progress = Float(currentQuestionIndex + 1) / Float(questions.count)
-           testProgressView.setProgress(progress, animated: true)
-           
-           // Update question number label
-           numberOfQuestion.text = "Step \(currentQuestionIndex + 1) of \(questions.count)"
-           
-           // Disable Next button initially
-           nextButton.isEnabled = false
-           NoneButton.layer.borderColor = UIColor.gray.cgColor
-           NoneButton.layer.borderWidth = 1.0
-       }
-       
-       func resetButtonStates() {
-           selectedAnswerIndex = nil
-           let buttons = [QuestionLabel1, QuestionLabel2, QuestionLabel3, QuestionLabel4]
-           for button in buttons {
-               button?.backgroundColor = .white
-               button?.layer.borderColor = UIColor.gray.cgColor
-               button?.layer.borderWidth = 1.0
-           }
-       }
+            let currentQuestion = questions[currentQuestionIndex]
+            questionLabel.text = currentQuestion.questionText
+            QuestionLabel1.setTitle(currentQuestion.options[0], for: .normal)
+            QuestionLabel2.setTitle(currentQuestion.options[1], for: .normal)
+            QuestionLabel3.setTitle(currentQuestion.options[2], for: .normal)
+            QuestionLabel4.setTitle(currentQuestion.options[3], for: .normal)
+            
+            // Reset button states
+            resetButtonStates()
+            
+            // Update progress view
+            let progress = Float(currentQuestionIndex + 1) / Float(questions.count)
+            testProgressView.setProgress(progress, animated: true)
+            
+            // Update question number label
+            numberOfQuestion.text = "Step \(currentQuestionIndex + 1) of \(questions.count)"
+            
+            // Disable Next button initially
+            nextButton.isEnabled = false
+            
+            // Make imageView circular
+//            imageView.layer.cornerRadius = imageView.frame.size.width / 2
+//            imageView.clipsToBounds = true
+            nextButton.layer.cornerRadius = 15
+        nextButton.layer.cornerRadius = 15
+        NoneButton.layer.cornerRadius = 15
+        QuestionLabel1.layer.cornerRadius = 15
+        QuestionLabel2.layer.cornerRadius = 15
+        QuestionLabel3.layer.cornerRadius = 15
+        QuestionLabel4.layer.cornerRadius = 15
+        
+        if let gradientColor = UIView.createGradientBackground() {
+//            someView.backgroundColor = gradientColor
+//            someLabel.textColor = gradientColor
+            nextButton.backgroundColor = gradientColor
+        }
+        
+
+        }
+        
+        func resetButtonStates() {
+            selectedAnswerIndex = nil
+            let buttons = [QuestionLabel1, QuestionLabel2, QuestionLabel3, QuestionLabel4]
+            for button in buttons {
+                button?.backgroundColor = .white
+                button?.layer.borderColor = UIColor.gray.cgColor
+                button?.layer.borderWidth = 1.0
+            }
+        }
 
     @IBAction func questionButtonAction1(_ sender: Any) {
         selectAnswer(at: 0)
@@ -86,17 +104,17 @@ class QuizVC: UIViewController {
         selectAnswer(at: 2)
     }
     
-    @IBAction func questionButtonAction4(_ sender: Any) {
+    @IBAction func questionButtonAction4(_ sender: Any) {//
         selectAnswer(at: 3)
     }
     
     @IBAction func noneButtonAction(_ sender: Any) {
         resetButtonStates()
-         nextButton.isEnabled = false
+        nextButton.isEnabled = false
     }
     
     @IBAction func NextButtonAction(_ sender: Any) {
-      //  guard let selectedAnswerIndex = selectedAnswerIndex else { return }
+        guard selectedAnswerIndex != nil else { return }
         // Handle the answer validation here if needed
         
         // Move to the next question
@@ -108,13 +126,17 @@ class QuizVC: UIViewController {
             // Handle the end of the quiz here
         }
     }
-
+    
     func selectAnswer(at index: Int) {
             resetButtonStates()
             selectedAnswerIndex = index
             let buttons = [QuestionLabel1, QuestionLabel2, QuestionLabel3, QuestionLabel4]
             let selectedButton = buttons[index]
-            selectedButton?.backgroundColor = .link
+            
+        if let gradientColor = UIView.createGradientBackground() {
+            selectedButton?.backgroundColor = gradientColor
+   
+        }
             nextButton.isEnabled = true
         }
-    }
+}

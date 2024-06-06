@@ -37,22 +37,5 @@ class LearningProcessVC: UIViewController {
             ])
         }
         
-//        private func setupBackButton() {
-//            let backButton = UIButton(type: .system)
-//            backButton.setTitle("Back", for: .normal)
-//            backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
-//            
-//            view.addSubview(backButton)
-//            
-//            // Position the button at the top-left corner of the view
-//            backButton.translatesAutoresizingMaskIntoConstraints = false
-//            NSLayoutConstraint.activate([
-//                backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
-//                backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16)
-//            ])
-//        }
-//        
-//        @objc private func backButtonTapped() {
-//            navigationController?.popViewController(animated: true)
-//        }
+
     }

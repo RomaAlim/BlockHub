@@ -46,6 +46,12 @@ class TableViewCell: UITableViewCell {
 
             NextButton.clipsToBounds = true
             CourseInformation.clipsToBounds = true
+        
+        if let gradientColor = UIView.createGradientBackground() {
+            NextButton.backgroundColor = gradientColor
+        }
+    
+
         }
     
     func configure(with course: MyCourse) {

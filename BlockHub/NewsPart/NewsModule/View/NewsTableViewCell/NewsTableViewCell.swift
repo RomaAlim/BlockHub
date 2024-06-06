@@ -17,7 +17,7 @@ class NewsTableViewCell: UITableViewCell {
         newsTitleTextView.isSelectable = true
         newsTitleTextView.isUserInteractionEnabled = true
 
-
+        newsTitleTextView.isUserInteractionEnabled = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
