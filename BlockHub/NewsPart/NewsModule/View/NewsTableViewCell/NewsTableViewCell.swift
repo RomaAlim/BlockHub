@@ -13,16 +13,16 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var newsTitleTextView: UITextView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         newsTitleTextView.isEditable = false
-        newsTitleTextView.isSelectable = false
-        newsTitleTextView.isUserInteractionEnabled = false
+        newsTitleTextView.isSelectable = true
+        newsTitleTextView.isUserInteractionEnabled = true
+
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }

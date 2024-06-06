@@ -17,10 +17,14 @@ class ProfileView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        updateUI()
       
     }
     
+    func updateUI(){
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
+        profileImageView.clipsToBounds = true
+    }
     @IBAction func achievementsButtonAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let listAchievsVC = storyboard.instantiateViewController(withIdentifier: "ListAchievsVC") as? ListAchievsVC {
@@ -84,4 +88,11 @@ class ProfileView: UIViewController {
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 present(alert, animated: true, completion: nil)
             }
-        }
+    
+    @IBAction func calendarButtonAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let listAchievsVC = storyboard.instantiateViewController(withIdentifier: "CalendarViewController") as? CalendarViewController {
+                navigationController?.pushViewController(listAchievsVC, animated: true)
+            }
+    }
+}

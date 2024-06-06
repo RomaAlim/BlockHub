@@ -52,6 +52,15 @@
 		3A9D40362C0D27C700931380 /* ListOfCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9D40352C0D27C700931380 /* ListOfCourses.swift */; };
 		3A9D40382C0D294000931380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A9D40372C0D294000931380 /* Assets.xcassets */; };
 		3ADDE03C2C0FD8D10007FE0A /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADDE03B2C0FD8D10007FE0A /* NewsModel.swift */; };
+		3AFF038D2C10EBB1004A3B70 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF038C2C10EBB1004A3B70 /* CalendarViewController.swift */; };
+		3AFF03962C10F6FE004A3B70 /* CompletingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF03952C10F6FE004A3B70 /* CompletingViewController.swift */; };
+		3AFF039A2C10F7A6004A3B70 /* CompletingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AFF03992C10F7A6004A3B70 /* CompletingTableViewCell.xib */; };
+		3AFF039B2C10F7A6004A3B70 /* CompletingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF03982C10F7A6004A3B70 /* CompletingTableViewCell.swift */; };
+		3AFF039D2C10FBA2004A3B70 /* CompletingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF039C2C10FBA2004A3B70 /* CompletingModel.swift */; };
+		3AFF03A52C110953004A3B70 /* LearningProcessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF03A42C110953004A3B70 /* LearningProcessVC.swift */; };
+		3AFF03AA2C110DFC004A3B70 /* testPDF.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3AFF03A92C110DFC004A3B70 /* testPDF.pdf */; };
+		3AFF03B32C11341A004A3B70 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF03B22C11341A004A3B70 /* QuizVC.swift */; };
+		3AFF03B52C113979004A3B70 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF03B42C113979004A3B70 /* QuizModel.swift */; };
 		60F8AC388194AA1D80860819 /* Pods_BlockHub_BlockHubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8478788D2662687AB65DB93E /* Pods_BlockHub_BlockHubUITests.framework */; };
 		62E3040A6624710D375F773E /* Pods_BlockHubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64EBC2B059843E9686B74F6 /* Pods_BlockHubTests.framework */; };
 /* End PBXBuildFile section */
@@ -123,6 +132,15 @@
 		3A9D40352C0D27C700931380 /* ListOfCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCourses.swift; sourceTree = "<group>"; };
 		3A9D40372C0D294000931380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3ADDE03B2C0FD8D10007FE0A /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		3AFF038C2C10EBB1004A3B70 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		3AFF03952C10F6FE004A3B70 /* CompletingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletingViewController.swift; sourceTree = "<group>"; };
+		3AFF03982C10F7A6004A3B70 /* CompletingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletingTableViewCell.swift; sourceTree = "<group>"; };
+		3AFF03992C10F7A6004A3B70 /* CompletingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompletingTableViewCell.xib; sourceTree = "<group>"; };
+		3AFF039C2C10FBA2004A3B70 /* CompletingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletingModel.swift; sourceTree = "<group>"; };
+		3AFF03A42C110953004A3B70 /* LearningProcessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningProcessVC.swift; sourceTree = "<group>"; };
+		3AFF03A92C110DFC004A3B70 /* testPDF.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = testPDF.pdf; sourceTree = "<group>"; };
+		3AFF03B22C11341A004A3B70 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
+		3AFF03B42C113979004A3B70 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 		515AE46831AA25D8BB57E378 /* Pods-BlockHub-BlockHubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockHub-BlockHubUITests.debug.xcconfig"; path = "Target Support Files/Pods-BlockHub-BlockHubUITests/Pods-BlockHub-BlockHubUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5EEF6B2DC3C8365512938CCA /* Pods-BlockHub-BlockHubUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockHub-BlockHubUITests.release.xcconfig"; path = "Target Support Files/Pods-BlockHub-BlockHubUITests/Pods-BlockHub-BlockHubUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7E553FA0C017E91FD8E7E28D /* Pods-BlockHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockHub.release.xcconfig"; path = "Target Support Files/Pods-BlockHub/Pods-BlockHub.release.xcconfig"; sourceTree = "<group>"; };
@@ -353,13 +371,16 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		3A27B3102C0E92A300E6B297 /* CoursePart */ = {
+		3A27B3102C0E92A300E6B297 /* LearningPart */ = {
 			isa = PBXGroup;
 			children = (
 				3A77CB552C0A016000BFEACC /* MyCourseModule */,
 				3A27B3072C0E924B00E6B297 /* ListOfChaptersModule */,
+				3AFF038E2C10F6A1004A3B70 /* CompletingModule */,
+				3AFF039E2C1108DB004A3B70 /* LearningModule */,
+				3AFF03AB2C11336E004A3B70 /* QuizModule */,
 			);
-			path = CoursePart;
+			path = LearningPart;
 			sourceTree = "<group>";
 		};
 		3A27B31A2C0E937400E6B297 /* ChaptersTableCell */ = {
@@ -617,13 +638,14 @@
 		3A83F2032C0FCFA000F2C03E /* ProfilePart */ = {
 			isa = PBXGroup;
 			children = (
-				3A83F2042C0FCFC100F2C03E /* ListOfAchievements */,
+				3AFF03862C10EB66004A3B70 /* CalendarModule */,
+				3A83F2042C0FCFC100F2C03E /* ListOfAchieveModule */,
 				3A77CB562C0A017200BFEACC /* ProfileModule */,
 			);
 			path = ProfilePart;
 			sourceTree = "<group>";
 		};
-		3A83F2042C0FCFC100F2C03E /* ListOfAchievements */ = {
+		3A83F2042C0FCFC100F2C03E /* ListOfAchieveModule */ = {
 			isa = PBXGroup;
 			children = (
 				3A83F2092C0FCFEE00F2C03E /* Router */,
@@ -632,7 +654,7 @@
 				3A83F2062C0FCFD900F2C03E /* Presenter */,
 				3A83F2052C0FCFD500F2C03E /* View */,
 			);
-			path = ListOfAchievements;
+			path = ListOfAchieveModule;
 			sourceTree = "<group>";
 		};
 		3A83F2052C0FCFD500F2C03E /* View */ = {
@@ -674,13 +696,13 @@
 		3A83F20C2C0FD1B400F2C03E /* NewsPart */ = {
 			isa = PBXGroup;
 			children = (
-				3A83F20D2C0FD1CD00F2C03E /* SelectedNews */,
+				3A83F20D2C0FD1CD00F2C03E /* SelectedNewsModule */,
 				3A77CB532C0A00F000BFEACC /* NewsModule */,
 			);
 			path = NewsPart;
 			sourceTree = "<group>";
 		};
-		3A83F20D2C0FD1CD00F2C03E /* SelectedNews */ = {
+		3A83F20D2C0FD1CD00F2C03E /* SelectedNewsModule */ = {
 			isa = PBXGroup;
 			children = (
 				3A83F2122C0FD1EB00F2C03E /* Router */,
@@ -689,7 +711,7 @@
 				3A83F20F2C0FD1DC00F2C03E /* Presenter */,
 				3A83F20E2C0FD1D700F2C03E /* View */,
 			);
-			path = SelectedNews;
+			path = SelectedNewsModule;
 			sourceTree = "<group>";
 		};
 		3A83F20E2C0FD1D700F2C03E /* View */ = {
@@ -792,7 +814,7 @@
 		3A909A1B2BDEE32C00D824A9 = {
 			isa = PBXGroup;
 			children = (
-				3A1A7D162BDF03A4008D5160 /* Notes */,
+				3AFF03A62C110ADD004A3B70 /* NotesForTest */,
 				3A909A262BDEE32C00D824A9 /* BlockHub */,
 				3A909A402BDEE32E00D824A9 /* BlockHubTests */,
 				3A909A4A2BDEE32E00D824A9 /* BlockHubUITests */,
@@ -819,7 +841,7 @@
 				3A27B31D2C0E986700E6B297 /* Model */,
 				3A27B3052C0E8F2000E6B297 /* AuthorizePart */,
 				3A83F2032C0FCFA000F2C03E /* ProfilePart */,
-				3A27B3102C0E92A300E6B297 /* CoursePart */,
+				3A27B3102C0E92A300E6B297 /* LearningPart */,
 				3A27B3062C0E8F4300E6B297 /* CoursesListPart */,
 				3A909A272BDEE32C00D824A9 /* AppDelegate.swift */,
 				3A909A292BDEE32C00D824A9 /* SceneDelegate.swift */,
@@ -865,6 +887,219 @@
 				3A9D40322C0D217B00931380 /* CoursesTableViewCell.xib */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		3AFF03862C10EB66004A3B70 /* CalendarModule */ = {
+			isa = PBXGroup;
+			children = (
+				3AFF038B2C10EB96004A3B70 /* Router */,
+				3AFF038A2C10EB8F004A3B70 /* Entity */,
+				3AFF03892C10EB88004A3B70 /* Interactor */,
+				3AFF03882C10EB80004A3B70 /* Presenter */,
+				3AFF03872C10EB7D004A3B70 /* View */,
+			);
+			path = CalendarModule;
+			sourceTree = "<group>";
+		};
+		3AFF03872C10EB7D004A3B70 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3AFF038C2C10EBB1004A3B70 /* CalendarViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3AFF03882C10EB80004A3B70 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3AFF03892C10EB88004A3B70 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3AFF038A2C10EB8F004A3B70 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		3AFF038B2C10EB96004A3B70 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3AFF038E2C10F6A1004A3B70 /* CompletingModule */ = {
+			isa = PBXGroup;
+			children = (
+				3AFF03942C10F6E0004A3B70 /* Router */,
+				3AFF03932C10F6DC004A3B70 /* Entiry */,
+				3AFF03922C10F6D6004A3B70 /* Interactor */,
+				3AFF03912C10F6D1004A3B70 /* Presenter */,
+				3AFF03902C10F6CD004A3B70 /* View */,
+			);
+			path = CompletingModule;
+			sourceTree = "<group>";
+		};
+		3AFF03902C10F6CD004A3B70 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3AFF03972C10F786004A3B70 /* CompletingTableViewCell */,
+				3AFF03952C10F6FE004A3B70 /* CompletingViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3AFF03912C10F6D1004A3B70 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3AFF03922C10F6D6004A3B70 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				3AFF039C2C10FBA2004A3B70 /* CompletingModel.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3AFF03932C10F6DC004A3B70 /* Entiry */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entiry;
+			sourceTree = "<group>";
+		};
+		3AFF03942C10F6E0004A3B70 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3AFF03972C10F786004A3B70 /* CompletingTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3AFF03982C10F7A6004A3B70 /* CompletingTableViewCell.swift */,
+				3AFF03992C10F7A6004A3B70 /* CompletingTableViewCell.xib */,
+			);
+			path = CompletingTableViewCell;
+			sourceTree = "<group>";
+		};
+		3AFF039E2C1108DB004A3B70 /* LearningModule */ = {
+			isa = PBXGroup;
+			children = (
+				3AFF03A32C110936004A3B70 /* Router */,
+				3AFF03A22C110930004A3B70 /* Entity */,
+				3AFF03A12C11092B004A3B70 /* Interactor */,
+				3AFF03A02C110926004A3B70 /* Presenter */,
+				3AFF039F2C110922004A3B70 /* View */,
+			);
+			path = LearningModule;
+			sourceTree = "<group>";
+		};
+		3AFF039F2C110922004A3B70 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3AFF03A42C110953004A3B70 /* LearningProcessVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3AFF03A02C110926004A3B70 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3AFF03A12C11092B004A3B70 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3AFF03A22C110930004A3B70 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		3AFF03A32C110936004A3B70 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3AFF03A62C110ADD004A3B70 /* NotesForTest */ = {
+			isa = PBXGroup;
+			children = (
+				3A1A7D162BDF03A4008D5160 /* Notes */,
+				3AFF03A92C110DFC004A3B70 /* testPDF.pdf */,
+			);
+			path = NotesForTest;
+			sourceTree = "<group>";
+		};
+		3AFF03AB2C11336E004A3B70 /* QuizModule */ = {
+			isa = PBXGroup;
+			children = (
+				3AFF03B12C1133F6004A3B70 /* Router */,
+				3AFF03B02C1133F0004A3B70 /* Entity */,
+				3AFF03AF2C1133E9004A3B70 /* Interactor */,
+				3AFF03AE2C1133DD004A3B70 /* Presenter */,
+				3AFF03AD2C1133D9004A3B70 /* View */,
+			);
+			path = QuizModule;
+			sourceTree = "<group>";
+		};
+		3AFF03AD2C1133D9004A3B70 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3AFF03B22C11341A004A3B70 /* QuizVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3AFF03AE2C1133DD004A3B70 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3AFF03AF2C1133E9004A3B70 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				3AFF03B42C113979004A3B70 /* QuizModel.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3AFF03B02C1133F0004A3B70 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		3AFF03B12C1133F6004A3B70 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		903B3A1695E02EA7D4DDCCCA /* Pods */ = {
@@ -996,7 +1231,9 @@
 				3A909A372BDEE32D00D824A9 /* Base in Resources */,
 				3A27B3192C0E937100E6B297 /* ChaptersTableCell.xib in Resources */,
 				3A9D40382C0D294000931380 /* Assets.xcassets in Resources */,
+				3AFF039A2C10F7A6004A3B70 /* CompletingTableViewCell.xib in Resources */,
 				3A1A7D172BDF03A4008D5160 /* Notes in Resources */,
+				3AFF03AA2C110DFC004A3B70 /* testPDF.pdf in Resources */,
 				3A83F2192C0FD36200F2C03E /* NewsTableViewCell.xib in Resources */,
 				3A909A2F2BDEE32C00D824A9 /* Base in Resources */,
 			);
@@ -1126,8 +1363,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AFF03A52C110953004A3B70 /* LearningProcessVC.swift in Sources */,
 				3A83F2142C0FD1FE00F2C03E /* SelectedNewsVC.swift in Sources */,
 				3A1A7D222BDF0B99008D5160 /* LogInView.swift in Sources */,
+				3AFF038D2C10EBB1004A3B70 /* CalendarViewController.swift in Sources */,
+				3AFF03B52C113979004A3B70 /* QuizModel.swift in Sources */,
 				3A9D40362C0D27C700931380 /* ListOfCourses.swift in Sources */,
 				3A885DEC2BF3DECC00BB5BF3 /* MainMenuRouter.swift in Sources */,
 				3A1A7D242BDF0E95008D5160 /* LogInPresentor.swift in Sources */,
@@ -1137,6 +1377,7 @@
 				3A27B31F2C0E989700E6B297 /* GradienLlabel.swift in Sources */,
 				3A27B3002C0E897000E6B297 /* DelegateProtocol.swift in Sources */,
 				3A27B3182C0E937100E6B297 /* ChaptersTableCell.swift in Sources */,
+				3AFF03B32C11341A004A3B70 /* QuizVC.swift in Sources */,
 				3A27B3092C0E926500E6B297 /* ListOfChaptersView.swift in Sources */,
 				3A27B31C2C0E96C800E6B297 /* ModelChapter.swift in Sources */,
 				3A885DF02BF3DEF500BB5BF3 /* MainMenuInteractor.swift in Sources */,
@@ -1154,11 +1395,14 @@
 				3A9D40332C0D217B00931380 /* CoursesTableViewCell.swift in Sources */,
 				3A27B2FE2C0E782200E6B297 /* AboutCourseView.swift in Sources */,
 				3A909A2A2BDEE32C00D824A9 /* SceneDelegate.swift in Sources */,
+				3AFF039B2C10F7A6004A3B70 /* CompletingTableViewCell.swift in Sources */,
+				3AFF039D2C10FBA2004A3B70 /* CompletingModel.swift in Sources */,
 				3A1A7D282BDF1145008D5160 /* LogInRouter.swift in Sources */,
 				3A909A322BDEE32C00D824A9 /* BlockHub.xcdatamodeld in Sources */,
 				3A27B3042C0E8D0A00E6B297 /* EntutyMyCourse.swift in Sources */,
 				3A77CB792C0A142900BFEACC /* SignUpView.swift in Sources */,
 				3A77CB702C0A032900BFEACC /* MyCourseView.swift in Sources */,
+				3AFF03962C10F6FE004A3B70 /* CompletingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
