@@ -85,10 +85,10 @@ class ListAchievsVC: UIViewController {
         
         func updateButtonStates(isShowingAchieved: Bool) {
             if isShowingAchieved {
-                sucessAchiveButtonUI.tintColor = .blue
+                sucessAchiveButtonUI.tintColor = .link
                 notSucessAchiveButtonUI.tintColor = .gray
             } else {
-                sucessAchiveButtonUI.tintColor = .gray
+                sucessAchiveButtonUI.tintColor = .link
                 notSucessAchiveButtonUI.tintColor = .blue
             }
         }

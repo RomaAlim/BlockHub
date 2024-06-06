@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  BlockHub
+
+  Created by Ramazan Kalabay on 07.06.2024.
+  
+*/
+
+"signin" = "Войти";
+"welcome" = "Добро пожаловать в мир обучения блокчейну";
+"learn_skills" = "Изучайте новейшие навыки";
+"subscribe_newsletter" = "Подпишитесь на нашу рассылку";
+"send" = "Отправить";
+"emailaddress" = "Адрес электронной почты";
+"signin_google" = "Войти через Google";
+"signin_email" = "Или войдите с помощью электронной почты";
+"email" = "Электронная почта";
+"password" = "Пароль";
+"signup" = "Зарегистрироваться";
+"forgot_password" = "Забыли пароль";
+"fullname" = "Полное имя";
+"already_have_account" = "Уже есть аккаунт?";
+"achievements" = "Достижения";
+"calendar" = "Календарь";
+"my_courses" = "Мои курсы";
+"blockhub_news" = "Новости BlockHub";
+"objectives" = "Цели";
+"descriptions" = "Описания";
+"learning_plan" = "План обучения";
+"registration_course" = "Регистрация на курс";
+"answer_get_points" = "Отвечайте и получайте баллы";
+"next" = "Далее";
+"none" = "Нет";
+"course_objectives" = "Цели курса:";
+"what_will_you_learn" = "Что вы узнаете:";
+"lesson_contains" = "Этот урок содержит.";

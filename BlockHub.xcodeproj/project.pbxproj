@@ -30,6 +30,12 @@
 		3A7B79622C120C670064E325 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B79602C120C670064E325 /* ListTableViewCell.swift */; };
 		3A7B79632C120C670064E325 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A7B79612C120C670064E325 /* ListTableViewCell.xib */; };
 		3A7B79652C120E6A0064E325 /* achieveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B79642C120E6A0064E325 /* achieveModel.swift */; };
+		3A7B79672C124A610064E325 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B79662C124A610064E325 /* CalendarCell.swift */; };
+		3A7B79692C124A8A0064E325 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B79682C124A8A0064E325 /* CalendarHelper.swift */; };
+		3A7B796B2C125EDC0064E325 /* TestVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B796A2C125EDC0064E325 /* TestVCViewController.swift */; };
+		3A7B796F2C1262FD0064E325 /* DateUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B796E2C1262FD0064E325 /* DateUserDefault.swift */; };
+		3A7B79742C1277CA0064E325 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A7B79722C1277CA0064E325 /* Localizable.strings */; };
+		3A7B797A2C127A660064E325 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B79792C127A660064E325 /* String+extension.swift */; };
 		3A83F20B2C0FD01300F2C03E /* ListAchievsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83F20A2C0FD01300F2C03E /* ListAchievsVC.swift */; };
 		3A83F2142C0FD1FE00F2C03E /* SelectedNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83F2132C0FD1FE00F2C03E /* SelectedNewsVC.swift */; };
 		3A83F2182C0FD36200F2C03E /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83F2162C0FD36200F2C03E /* NewsTableViewCell.swift */; };
@@ -109,6 +115,19 @@
 		3A7B79602C120C670064E325 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		3A7B79612C120C670064E325 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		3A7B79642C120E6A0064E325 /* achieveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = achieveModel.swift; sourceTree = "<group>"; };
+		3A7B79662C124A610064E325 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		3A7B79682C124A8A0064E325 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
+		3A7B796A2C125EDC0064E325 /* TestVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCViewController.swift; sourceTree = "<group>"; };
+		3A7B796E2C1262FD0064E325 /* DateUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUserDefault.swift; sourceTree = "<group>"; };
+		3A7B79702C12779E0064E325 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		3A7B79712C12779E0064E325 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		3A7B79732C1277CA0064E325 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3A7B79752C1278090064E325 /* kk-KZ */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "kk-KZ"; path = "kk-KZ.lproj/Main.strings"; sourceTree = "<group>"; };
+		3A7B79762C1278090064E325 /* kk-KZ */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "kk-KZ"; path = "kk-KZ.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		3A7B79772C1278090064E325 /* kk-KZ */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "kk-KZ"; path = "kk-KZ.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3A7B79782C1278140064E325 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3A7B79792C127A660064E325 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		3A7B797C2C127DB90064E325 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		3A83F20A2C0FD01300F2C03E /* ListAchievsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAchievsVC.swift; sourceTree = "<group>"; };
 		3A83F2132C0FD1FE00F2C03E /* SelectedNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedNewsVC.swift; sourceTree = "<group>"; };
 		3A83F2162C0FD36200F2C03E /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -402,6 +421,7 @@
 			isa = PBXGroup;
 			children = (
 				3A27B31E2C0E989700E6B297 /* GradienLlabel.swift */,
+				3A7B796A2C125EDC0064E325 /* TestVCViewController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -650,6 +670,22 @@
 			path = ListTableViewCell;
 			sourceTree = "<group>";
 		};
+		3A7B796C2C1262CA0064E325 /* UserDefault Service */ = {
+			isa = PBXGroup;
+			children = (
+				3A7B796D2C1262DA0064E325 /* DateCalendarUserDefault */,
+			);
+			path = "UserDefault Service";
+			sourceTree = "<group>";
+		};
+		3A7B796D2C1262DA0064E325 /* DateCalendarUserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				3A7B796E2C1262FD0064E325 /* DateUserDefault.swift */,
+			);
+			path = DateCalendarUserDefault;
+			sourceTree = "<group>";
+		};
 		3A83F2032C0FCFA000F2C03E /* ProfilePart */ = {
 			isa = PBXGroup;
 			children = (
@@ -854,6 +890,7 @@
 		3A909A262BDEE32C00D824A9 /* BlockHub */ = {
 			isa = PBXGroup;
 			children = (
+				3A7B796C2C1262CA0064E325 /* UserDefault Service */,
 				3A27B31D2C0E986700E6B297 /* Model */,
 				3A83F20C2C0FD1B400F2C03E /* NewsPart */,
 				3A27B3052C0E8F2000E6B297 /* AuthorizePart */,
@@ -867,6 +904,8 @@
 				3A909A352BDEE32D00D824A9 /* LaunchScreen.storyboard */,
 				3A909A382BDEE32D00D824A9 /* Info.plist */,
 				3A909A302BDEE32C00D824A9 /* BlockHub.xcdatamodeld */,
+				3A7B79722C1277CA0064E325 /* Localizable.strings */,
+				3A7B79792C127A660064E325 /* String+extension.swift */,
 			);
 			path = BlockHub;
 			sourceTree = "<group>";
@@ -936,6 +975,8 @@
 		3AFF03892C10EB88004A3B70 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				3A7B79662C124A610064E325 /* CalendarCell.swift */,
+				3A7B79682C124A8A0064E325 /* CalendarHelper.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -1223,6 +1264,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				"kk-KZ",
 			);
 			mainGroup = 3A909A1B2BDEE32C00D824A9;
 			packageReferences = (
@@ -1244,6 +1287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A9D402D2C0D08D100931380 /* TableViewCell.xib in Resources */,
+				3A7B79742C1277CA0064E325 /* Localizable.strings in Resources */,
 				3A9D40342C0D217B00931380 /* CoursesTableViewCell.xib in Resources */,
 				3A909A372BDEE32D00D824A9 /* Base in Resources */,
 				3A27B3192C0E937100E6B297 /* ChaptersTableCell.xib in Resources */,
@@ -1386,6 +1430,7 @@
 				3A1A7D222BDF0B99008D5160 /* LogInView.swift in Sources */,
 				3AFF038D2C10EBB1004A3B70 /* CalendarViewController.swift in Sources */,
 				3AFF03B52C113979004A3B70 /* QuizModel.swift in Sources */,
+				3A7B796B2C125EDC0064E325 /* TestVCViewController.swift in Sources */,
 				3A9D40362C0D27C700931380 /* ListOfCourses.swift in Sources */,
 				3A885DEC2BF3DECC00BB5BF3 /* MainMenuRouter.swift in Sources */,
 				3A1A7D242BDF0E95008D5160 /* LogInPresentor.swift in Sources */,
@@ -1410,18 +1455,22 @@
 				3A885DF22BF3DF0200BB5BF3 /* MainMenuPresenter.swift in Sources */,
 				3A885DF62BF3E01300BB5BF3 /* MainMenuView.swift in Sources */,
 				3A77CB6E2C0A02CB00BFEACC /* CoursesView.swift in Sources */,
+				3A7B79692C124A8A0064E325 /* CalendarHelper.swift in Sources */,
 				3A9D402F2C0D0C5300931380 /* ModelCourse.swift in Sources */,
 				3A9D40332C0D217B00931380 /* CoursesTableViewCell.swift in Sources */,
 				3A27B2FE2C0E782200E6B297 /* AboutCourseView.swift in Sources */,
 				3A7B79622C120C670064E325 /* ListTableViewCell.swift in Sources */,
 				3A909A2A2BDEE32C00D824A9 /* SceneDelegate.swift in Sources */,
 				3AFF039B2C10F7A6004A3B70 /* CompletingTableViewCell.swift in Sources */,
+				3A7B79672C124A610064E325 /* CalendarCell.swift in Sources */,
 				3AFF039D2C10FBA2004A3B70 /* CompletingModel.swift in Sources */,
 				3A1A7D282BDF1145008D5160 /* LogInRouter.swift in Sources */,
+				3A7B796F2C1262FD0064E325 /* DateUserDefault.swift in Sources */,
 				3A909A322BDEE32C00D824A9 /* BlockHub.xcdatamodeld in Sources */,
 				3A27B3042C0E8D0A00E6B297 /* EntutyMyCourse.swift in Sources */,
 				3A77CB792C0A142900BFEACC /* SignUpView.swift in Sources */,
 				3A77CB702C0A032900BFEACC /* MyCourseView.swift in Sources */,
+				3A7B797A2C127A660064E325 /* String+extension.swift in Sources */,
 				3AFF03962C10F6FE004A3B70 /* CompletingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1459,10 +1508,23 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3A7B79722C1277CA0064E325 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A7B79732C1277CA0064E325 /* en */,
+				3A7B79772C1278090064E325 /* kk-KZ */,
+				3A7B79782C1278140064E325 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		3A909A2D2BDEE32C00D824A9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3A909A2E2BDEE32C00D824A9 /* Base */,
+				3A7B79702C12779E0064E325 /* ru */,
+				3A7B79752C1278090064E325 /* kk-KZ */,
+				3A7B797C2C127DB90064E325 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1471,6 +1533,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				3A909A362BDEE32D00D824A9 /* Base */,
+				3A7B79712C12779E0064E325 /* ru */,
+				3A7B79762C1278090064E325 /* kk-KZ */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1483,6 +1547,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1546,6 +1611,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

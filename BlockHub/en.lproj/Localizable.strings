@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  BlockHub
+
+  Created by Ramazan Kalabay on 07.06.2024.
+  
+*/
+"signin" = "Sign In";
+"welcome" = "Welcome to the World of BlockChain Education";
+"learn_skills" = "Learn The latest skills";
+"subscribe_newsletter" = "Subscribe to our newsletter";
+"send" = "Send";
+"emailaddress" = "Email Address";
+"signin_google" = "Sign in with Google";
+"signin_email" = "Or sign in with your email";
+"email" = "Email";
+"password" = "Password";
+"signup" = "Sign Up";
+"forgot_password" = "Forgot Password";
+"fullname" = "Full Name";
+"already_have_account" = "Already have an account?";
+"achievements" = "Achievements";
+"calendar" = "Calendar";
+"my_courses" = "My Courses";
+"blockhub_news" = "BlockHub News";
+"objectives" = "Objectives";
+"descriptions" = "Descriptions";
+"learning_plan" = "Learning Plan";
+"registration_course" = "Registration for the course";
+"answer_get_points" = "Answer and get points";
+"next" = "Next";
+"none" = "None";
+"course_objectives" = "Course Objectives:";
+"what_will_you_learn" = "What will you learn:";
+"lesson_contains" = "This lesson contains.";

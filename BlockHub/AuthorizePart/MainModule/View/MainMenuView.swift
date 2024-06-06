@@ -16,6 +16,7 @@ class MainMenuView: UIViewController {
     @IBOutlet weak var sendButtonUI: UIButton!
     @IBOutlet weak var computerImage: UIImageView!
     @IBOutlet weak var computerText: UILabel!
+    @IBOutlet weak var subscribetoourLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,12 @@ class MainMenuView: UIViewController {
         computerViewCorner.layer.cornerRadius = 10
         signInButtonUI.layer.cornerRadius = 10
         sendButtonUI.layer.cornerRadius = 10
+    }
+    
+    func updateLocalizable(){
+        signInButtonUI.titleLabel?.text = "signin".localized
+        sendButtonUI.titleLabel?.text = "send".localized
+        computerText.text = "welcome".localized
     }
 }
 

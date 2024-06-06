@@ -63,5 +63,6 @@ class AboutCourseView: UIViewController {
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: nil)
+            CourseManager.shared.saveRegistration(courseId: "course123")
         }
 }

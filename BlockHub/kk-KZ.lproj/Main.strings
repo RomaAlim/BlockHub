@@ -1,0 +1,375 @@
+
+/* Class = "UILabel"; text = "Person Name"; ObjectID = "1ls-R6-1S7"; */
+"1ls-R6-1S7.text" = "Person Name";
+
+/* Class = "UITextField"; placeholder = "****************"; ObjectID = "1vl-hE-o5m"; */
+"1vl-hE-o5m.placeholder" = "****************";
+
+/* Class = "UITextView"; text = "Welcome to BlockHub Online  Learning Platform"; ObjectID = "1xA-MJ-TiO"; */
+"1xA-MJ-TiO.text" = "Welcome to BlockHub Online  Learning Platform";
+
+/* Class = "UILabel"; text = "Learning plan:"; ObjectID = "2fv-ll-BR7"; */
+"2fv-ll-BR7.text" = "Learning plan:";
+
+/* Class = "UITabBarItem"; title = "MyCourse"; ObjectID = "2mB-ZI-ifE"; */
+"2mB-ZI-ifE.title" = "MyCourse";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4Vu-PJ-t6M"; */
+"4Vu-PJ-t6M.text" = "Label";
+
+/* Class = "UITextView"; text = "Backend-разработке приложений на Java\nПостроении собственной микросервисной архитектуры\nОтслеживании истории изменений кода с помощью Git\nСоздании веб-приложений на фреймворке Spring\nРаботе с разными типами баз данных (SQL, NoSQL)\nНастройке сервисной коммуникации с помощью Apache Kafka"; ObjectID = "4l8-4j-qBn"; */
+"4l8-4j-qBn.text" = "Backend-разработке приложений на Java\nПостроении собственной микросервисной архитектуры\nОтслеживании истории изменений кода с помощью Git\nСоздании веб-приложений на фреймворке Spring\nРаботе с разными типами баз данных (SQL, NoSQL)\nНастройке сервисной коммуникации с помощью Apache Kafka";
+
+/* Class = "UILabel"; text = "Данный урок содержит:"; ObjectID = "61W-4S-xo4"; */
+"61W-4S-xo4.text" = "Данный урок содержит:";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "6GF-v9-Fcm"; */
+"6GF-v9-Fcm.text" = "Email";
+
+/* Class = "UITextField"; placeholder = "Email Adress"; ObjectID = "7It-52-tXb"; */
+"7It-52-tXb.placeholder" = "Email Adress";
+
+/* Class = "UIButton"; configuration.title = "Sign in"; ObjectID = "7zH-W1-pDn"; */
+"7zH-W1-pDn.configuration.title" = "Sign in";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "7zH-W1-pDn"; */
+"7zH-W1-pDn.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "My Courses"; ObjectID = "85c-pk-tBh"; */
+"85c-pk-tBh.text" = "My Courses";
+
+/* Class = "UIViewController"; title = "CompletingViewController"; ObjectID = "8Lo-jC-D40"; */
+"8Lo-jC-D40.title" = "CompletingViewController";
+
+/* Class = "UIButton"; configuration.title = "Sign In"; ObjectID = "9X2-a2-t5H"; */
+"9X2-a2-t5H.configuration.title" = "Sign In";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "9X2-a2-t5H"; */
+"9X2-a2-t5H.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Қалабай РАмазан"; ObjectID = "9f6-ZS-spe"; */
+"9f6-ZS-spe.text" = "Қалабай РАмазан";
+
+/* Class = "UILabel"; text = "Education"; ObjectID = "AYN-Cy-0HG"; */
+"AYN-Cy-0HG.text" = "Education";
+
+/* Class = "UITextView"; text = "Welcome to BlockHub Online  Learning Platform"; ObjectID = "Afi-YI-z0b"; */
+"Afi-YI-z0b.text" = "Welcome to BlockHub Online  Learning Platform";
+
+/* Class = "UITextField"; placeholder = "****************"; ObjectID = "Ast-DQ-fxf"; */
+"Ast-DQ-fxf.placeholder" = "****************";
+
+/* Class = "UIButton"; configuration.title = "Registration for the course"; ObjectID = "BId-Z6-prd"; */
+"BId-Z6-prd.configuration.title" = "Registration for the course";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "BId-Z6-prd"; */
+"BId-Z6-prd.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Sign Up"; ObjectID = "CN9-ok-hl6"; */
+"CN9-ok-hl6.configuration.title" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "CN9-ok-hl6"; */
+"CN9-ok-hl6.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "Dtl-Yr-5jt"; */
+"Dtl-Yr-5jt.text" = "1";
+
+/* Class = "UITextField"; placeholder = "Kalabay Ramazan"; ObjectID = "EGb-bE-5u2"; */
+"EGb-bE-5u2.placeholder" = "Kalabay Ramazan";
+
+/* Class = "UILabel"; text = "Answer and get points"; ObjectID = "Fbl-Zo-Xd6"; */
+"Fbl-Zo-Xd6.text" = "Answer and get points";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "G79-eh-7Dr"; */
+"G79-eh-7Dr.normalTitle" = "Button";
+
+/* Class = "UITextView"; text = "Получить практические навыки программирования на Java  \nИспользовать систему контроля версии Git\nУметь подключать базы данных к проекту\nРазработать веб-приложение на фреймворке Spring\nНастроить работу компонент микросервисной архитектуры"; ObjectID = "GoN-IZ-WsQ"; */
+"GoN-IZ-WsQ.text" = "Получить практические навыки программирования на Java  \nИспользовать систему контроля версии Git\nУметь подключать базы данных к проекту\nРазработать веб-приложение на фреймворке Spring\nНастроить работу компонент микросервисной архитектуры";
+
+/* Class = "UILabel"; text = "Sat"; ObjectID = "HKC-cI-w9e"; */
+"HKC-cI-w9e.text" = "Sat";
+
+/* Class = "UILabel"; text = "Name of Course"; ObjectID = "Iif-ps-3WU"; */
+"Iif-ps-3WU.text" = "Name of Course";
+
+/* Class = "UILabel"; text = "FullName"; ObjectID = "Ixk-2G-s66"; */
+"Ixk-2G-s66.text" = "FullName";
+
+/* Class = "UILabel"; text = "Description:"; ObjectID = "JKd-y3-TIM"; */
+"JKd-y3-TIM.text" = "Description:";
+
+/* Class = "UILabel"; text = "Author"; ObjectID = "JMP-hO-ayX"; */
+"JMP-hO-ayX.text" = "Author";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "JhY-x0-ixN"; */
+"JhY-x0-ixN.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UITextField"; placeholder = "YourEmail@test.com"; ObjectID = "Jy5-25-GiK"; */
+"Jy5-25-GiK.placeholder" = "YourEmail@test.com";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "Jzp-Yb-FPn"; */
+"Jzp-Yb-FPn.text" = "Email";
+
+/* Class = "UILabel"; text = "Sun"; ObjectID = "M6d-IT-cVF"; */
+"M6d-IT-cVF.text" = "Sun";
+
+/* Class = "UIButton"; configuration.title = "Show"; ObjectID = "MA4-1j-xh7"; */
+"MA4-1j-xh7.configuration.title" = "Show";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "MA4-1j-xh7"; */
+"MA4-1j-xh7.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Sign up"; ObjectID = "N1w-Vb-P51"; */
+"N1w-Vb-P51.configuration.title" = "Sign up";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "N1w-Vb-P51"; */
+"N1w-Vb-P51.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Feb 2021"; ObjectID = "N7m-Fm-3eU"; */
+"N7m-Fm-3eU.text" = "Feb 2021";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "Nzo-dE-f18"; */
+"Nzo-dE-f18.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UIButton"; configuration.title = " Sign in with Google"; ObjectID = "P5m-I0-gro"; */
+"P5m-I0-gro.configuration.title" = " Sign in with Google";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "P5m-I0-gro"; */
+"P5m-I0-gro.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Achievements"; ObjectID = "PKt-aP-N2u"; */
+"PKt-aP-N2u.configuration.title" = "Achievements";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PKt-aP-N2u"; */
+"PKt-aP-N2u.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PXT-FB-Nw4"; */
+"PXT-FB-Nw4.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Or sign in with your email"; ObjectID = "PiZ-gH-lav"; */
+"PiZ-gH-lav.text" = "Or sign in with your email";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "SOY-d3-06e"; */
+"SOY-d3-06e.normalTitle" = "Button";
+
+/* Class = "UIViewController"; title = "ListAchievsVC"; ObjectID = "T4F-Rb-BBB"; */
+"T4F-Rb-BBB.title" = "ListAchievsVC";
+
+/* Class = "UITextField"; placeholder = "YourEmail@test.com"; ObjectID = "TGc-bS-s5B"; */
+"TGc-bS-s5B.placeholder" = "YourEmail@test.com";
+
+/* Class = "UILabel"; text = "BlockHub News"; ObjectID = "Thp-os-Xrz"; */
+"Thp-os-Xrz.text" = "BlockHub News";
+
+/* Class = "UILabel"; text = "World"; ObjectID = "UKa-uH-u7D"; */
+"UKa-uH-u7D.text" = "World";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "URV-ea-4yg"; */
+"URV-ea-4yg.title" = "Item";
+
+/* Class = "UIButton"; configuration.title = "TestNewsNotification"; ObjectID = "VdC-0R-8WO"; */
+"VdC-0R-8WO.configuration.title" = "TestNewsNotification";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "VdC-0R-8WO"; */
+"VdC-0R-8WO.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Tue"; ObjectID = "Vpr-PU-32h"; */
+"Vpr-PU-32h.text" = "Tue";
+
+/* Class = "UILabel"; text = "Welcome to the"; ObjectID = "Wyj-XB-tFg"; */
+"Wyj-XB-tFg.text" = "Welcome to the";
+
+/* Class = "UILabel"; text = "Thur"; ObjectID = "XzU-lg-CEh"; */
+"XzU-lg-CEh.text" = "Thur";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Y1g-ZL-IWX"; */
+"Y1g-ZL-IWX.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "News"; ObjectID = "YXL-Xb-kNY"; */
+"YXL-Xb-kNY.title" = "News";
+
+/* Class = "UILabel"; text = "Введение"; ObjectID = "ZXs-f5-dJU"; */
+"ZXs-f5-dJU.text" = "Введение";
+
+/* Class = "UIButton"; configuration.title = "Calendar"; ObjectID = "avq-Yc-KNZ"; */
+"avq-Yc-KNZ.configuration.title" = "Calendar";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "avq-Yc-KNZ"; */
+"avq-Yc-KNZ.normalTitle" = "Button";
+
+/* Class = "UIViewController"; title = "BlockHub"; ObjectID = "bl6-YD-N1s"; */
+"bl6-YD-N1s.title" = "BlockHub";
+
+/* Class = "UIButton"; configuration.title = "Delete"; ObjectID = "cYw-YG-Bi4"; */
+"cYw-YG-Bi4.configuration.title" = "Delete";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cYw-YG-Bi4"; */
+"cYw-YG-Bi4.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "      miniDescription1"; ObjectID = "dEt-qu-qZb"; */
+"dEt-qu-qZb.text" = "      miniDescription1";
+
+/* Class = "UILabel"; text = "Question"; ObjectID = "e3c-iI-S1u"; */
+"e3c-iI-S1u.text" = "Question";
+
+/* Class = "UIButton"; configuration.title = "Testupdate"; ObjectID = "eim-AQ-ZIa"; */
+"eim-AQ-ZIa.configuration.title" = "Testupdate";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "eim-AQ-ZIa"; */
+"eim-AQ-ZIa.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Full Name"; ObjectID = "fQn-AC-oOQ"; */
+"fQn-AC-oOQ.text" = "Full Name";
+
+/* Class = "UIViewController"; title = "BlockHub"; ObjectID = "fuw-Op-f2e"; */
+"fuw-Op-f2e.title" = "BlockHub";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "gvS-Jc-nH0"; */
+"gvS-Jc-nH0.title" = "Profile";
+
+/* Class = "UILabel"; text = "Чему вы научитесь:"; ObjectID = "gvz-AQ-V0e"; */
+"gvz-AQ-V0e.text" = "Чему вы научитесь:";
+
+/* Class = "UILabel"; text = "Цели курса:"; ObjectID = "hRn-Tb-A66"; */
+"hRn-Tb-A66.text" = "Цели курса:";
+
+/* Class = "UIButton"; configuration.title = "Forgot password?"; ObjectID = "ifW-U1-JPY"; */
+"ifW-U1-JPY.configuration.title" = "Forgot password?";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ifW-U1-JPY"; */
+"ifW-U1-JPY.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "BlockHub"; ObjectID = "jpd-eq-AKR"; */
+"jpd-eq-AKR.text" = "BlockHub";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "k2H-6i-m3r"; */
+"k2H-6i-m3r.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "k2H-6i-m3r"; */
+"k2H-6i-m3r.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "None"; ObjectID = "kcy-ec-NTL"; */
+"kcy-ec-NTL.configuration.title" = "None";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kcy-ec-NTL"; */
+"kcy-ec-NTL.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Mon"; ObjectID = "lFy-m4-L6P"; */
+"lFy-m4-L6P.text" = "Mon";
+
+/* Class = "UIViewController"; title = "ListOfChaptersView"; ObjectID = "lGK-KS-AzN"; */
+"lGK-KS-AzN.title" = "ListOfChaptersView";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mcf-XJ-DiM"; */
+"mcf-XJ-DiM.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "TestNewXourse"; ObjectID = "mpZ-ak-4Ek"; */
+"mpZ-ak-4Ek.configuration.title" = "TestNewXourse";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mpZ-ak-4Ek"; */
+"mpZ-ak-4Ek.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Sign In"; ObjectID = "nKA-5w-Ftw"; */
+"nKA-5w-Ftw.configuration.title" = "Sign In";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "nKA-5w-Ftw"; */
+"nKA-5w-Ftw.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Subscribe to our newsletter"; ObjectID = "nxZ-4r-gLz"; */
+"nxZ-4r-gLz.text" = "Subscribe to our newsletter";
+
+/* Class = "UILabel"; text = "Number of question"; ObjectID = "oLc-fZ-k6C"; */
+"oLc-fZ-k6C.text" = "Number of question";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "p0A-m4-1fc"; */
+"p0A-m4-1fc.text" = "Email";
+
+/* Class = "UILabel"; text = "of Blockchain"; ObjectID = "pII-Ev-eKg"; */
+"pII-Ev-eKg.text" = "of Blockchain";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "pTr-jk-v3l"; */
+"pTr-jk-v3l.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "pTr-jk-v3l"; */
+"pTr-jk-v3l.normalTitle" = "Button";
+
+/* Class = "UIViewController"; title = "AboutCourseView"; ObjectID = "qIr-oP-waI"; */
+"qIr-oP-waI.title" = "AboutCourseView";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "qLQ-5O-Z1P"; */
+"qLQ-5O-Z1P.text" = "Password";
+
+/* Class = "UILabel"; text = "      miniDescription1"; ObjectID = "qXZ-5Z-Qnx"; */
+"qXZ-5Z-Qnx.text" = "      miniDescription1";
+
+/* Class = "UIButton"; configuration.title = "Send"; ObjectID = "qdq-LC-Imv"; */
+"qdq-LC-Imv.configuration.title" = "Send";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "qdq-LC-Imv"; */
+"qdq-LC-Imv.normalTitle" = "Button";
+
+/* Class = "UIViewController"; title = "MyCourseView"; ObjectID = "qwK-Nv-OxY"; */
+"qwK-Nv-OxY.title" = "MyCourseView";
+
+/* Class = "UILabel"; text = "Wed"; ObjectID = "r0L-Bs-h6Q"; */
+"r0L-Bs-h6Q.text" = "Wed";
+
+/* Class = "UITabBarItem"; title = "Courses"; ObjectID = "rrW-zT-YJs"; */
+"rrW-zT-YJs.title" = "Courses";
+
+/* Class = "UILabel"; text = "Achievements"; ObjectID = "tiP-tc-HEH"; */
+"tiP-tc-HEH.text" = "Achievements";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "u8T-QX-swY"; */
+"u8T-QX-swY.text" = "Password";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "vA7-HV-Ghq"; */
+"vA7-HV-Ghq.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "vA7-HV-Ghq"; */
+"vA7-HV-Ghq.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Already have account?"; ObjectID = "vPR-rl-v3F"; */
+"vPR-rl-v3F.text" = "Already have account?";
+
+/* Class = "UILabel"; text = "Fri"; ObjectID = "vhB-1r-1kt"; */
+"vhB-1r-1kt.text" = "Fri";
+
+/* Class = "UIViewController"; title = "ProfileView"; ObjectID = "wg2-Ix-ltW"; */
+"wg2-Ix-ltW.title" = "ProfileView";
+
+/* Class = "UILabel"; text = "Learn The Latest Skills"; ObjectID = "x1C-5Z-JEt"; */
+"x1C-5Z-JEt.text" = "Learn The Latest Skills";
+
+/* Class = "UIButton"; configuration.title = "Testmycourse"; ObjectID = "xFB-F2-Vif"; */
+"xFB-F2-Vif.configuration.title" = "Testmycourse";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xFB-F2-Vif"; */
+"xFB-F2-Vif.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Or sign in with your email"; ObjectID = "y4I-df-Ytz"; */
+"y4I-df-Ytz.text" = "Or sign in with your email";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "yOa-xV-66u"; */
+"yOa-xV-66u.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Name of Course"; ObjectID = "yWh-UQ-PTy"; */
+"yWh-UQ-PTy.text" = "Name of Course";
+
+/* Class = "UIButton"; configuration.title = "Next"; ObjectID = "yZN-3s-tKE"; */
+"yZN-3s-tKE.configuration.title" = "Next";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "yZN-3s-tKE"; */
+"yZN-3s-tKE.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "zkR-rH-RCb"; */
+"zkR-rH-RCb.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "zkR-rH-RCb"; */
+"zkR-rH-RCb.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = " Sign in with Google"; ObjectID = "zlU-YC-pLo"; */
+"zlU-YC-pLo.configuration.title" = " Sign in with Google";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "zlU-YC-pLo"; */
+"zlU-YC-pLo.normalTitle" = "Button";

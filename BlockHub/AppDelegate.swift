@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,12 +18,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             // Set the back button color to black globally
             UINavigationBar.appearance().tintColor = .black
-
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+                        if granted {
+                            print("Permission granted")
+                        } else if let error = error {
+                            print("Error: \(error.localizedDescription)")
+                        }
+                    }
             return true
         }
 
     // MARK: UISceneSession Lifecycle
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        if #available(iOS 14.0, *) {
+            completionHandler([.banner, .list, .sound])
+        } else {
+            completionHandler([.alert, .sound])
+        }
+    }
 
+    // Обработка уведомлений при нажатии на уведомление
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        // Обработка действия
+        completionHandler()
+    }
+    
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
