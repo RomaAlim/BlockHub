@@ -27,6 +27,8 @@ class LogInView: UIViewController, LogInViewInput {
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var signUoButtonUI: UIButton!
     @IBOutlet weak var forgotPasswordUI: UIButton!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,12 +40,39 @@ class LogInView: UIViewController, LogInViewInput {
     }
     
     @IBAction func signInButtonAction(_ sender: Any) {
+        guard let username = emailField.text, let password = passwordField.text else { return }
+
+        AuthService.shared.signIn(username: username, password: password) { success in
+            DispatchQueue.main.async {
+                if success {
+                    print("Sign in successful for user: \(username)")
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    if let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabbar") as? UITabBarController {
+                        mainTabBarController.selectedIndex = 0
+                        if let navigationController = self.navigationController {
+                            navigationController.pushViewController(mainTabBarController, animated: true)
+                        }
+                    }
+                } else {
+                    print("Sign in failed for user: \(username)")
+                    let alert = UIAlertController(title: "Error", message: "Sign in failed", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
+
     }
     
     @IBAction func forgotButtonAction(_ sender: Any) {
     }
     
     @IBAction func signUpButtonAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+         if let signUpViewController = storyboard.instantiateViewController(withIdentifier: "SignUpView") as? SignUpView {
+             // Переходим на SignUpViewController
+             self.navigationController?.pushViewController(signUpViewController, animated: true)
+         }
     }
     
     func updateUI(){

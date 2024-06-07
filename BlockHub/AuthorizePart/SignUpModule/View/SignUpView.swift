@@ -32,6 +32,7 @@ class SignUpView: UIViewController {
         super.viewDidLoad()
         updateLocalizable()
         updateUI()
+        updateUItest()
     }
     
 
@@ -39,9 +40,38 @@ class SignUpView: UIViewController {
     }
     
     @IBAction func signUpButtonAction(_ sender: Any) {
+        guard let username = fullNameField.text, let password = passwordField.text, let email = emailField.text else { return }
+
+                AuthService.shared.signUp(username: username, email: email, password: password) { success in
+                    DispatchQueue.main.async {
+                        if success {
+                            print("Sign up and sign in successful for user: \(username)")
+                        } else {
+                            print("Sign up or sign in failed for user: \(username)")
+                            let alert = UIAlertController(title: "Error", message: "Sign up or sign in failed", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                    }
+                }
     }
+
+            func updateUItest() {
+                // Логирование размеров и позиций элементов
+                print("signUoButton frame: \(signUoButton.frame)")
+                signUoButton.layer.cornerRadius = 10
+                // Проверка на NaN значения
+                if signUoButton.layer.cornerRadius.isNaN {
+                    print("Error: signUoButton.layer.cornerRadius is NaN")
+                }
+            }
     
     @IBAction func signInButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let loginViewController = storyboard.instantiateViewController(withIdentifier: "LogInView") as? LogInView {
+            // Переходим на LoginViewController
+            self.navigationController?.pushViewController(loginViewController, animated: true)
+        }
     }
     
     func updateUI(){

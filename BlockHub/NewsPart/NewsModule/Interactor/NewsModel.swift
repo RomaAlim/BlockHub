@@ -7,8 +7,10 @@
 
 import Foundation
 
-struct News {
+struct News: Codable {
     let id: Int
     let title: String
-    let description: String
+    let subtitle: String
+    let content: String
+    let datePublished: String
 }

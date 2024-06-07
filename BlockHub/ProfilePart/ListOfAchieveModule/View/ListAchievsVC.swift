@@ -29,7 +29,8 @@ class ListAchievsVC: UIViewController {
             loadAchievements()
             showAchieved()
             updateUI()
-        
+            fetchProfileImage()
+            displayUserData()
         if let gradientColor = UIView.createGradientBackground() {
             self.view.backgroundColor = gradientColor
         }
@@ -101,7 +102,54 @@ class ListAchievsVC: UIViewController {
     @IBAction func notSucessAchiveButtonAction(_ sender: Any) {
         showNotAchieved()
     }
-    
+    private func fetchProfileImage() {
+          guard let token = TokenStorageService.shared.getToken() else {
+              print("No token found")
+              return
+          }
+
+          let url = URL(string: "https://educationplatform-juhi.onrender.com/api/v1/user/image")!
+          var request = URLRequest(url: url)
+          request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+          request.httpMethod = "GET"
+
+          URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+              if let error = error {
+                  print("Failed to fetch profile image: \(error)")
+                  return
+              }
+
+              guard let data = data, let imageUrlString = String(data: data, encoding: .utf8), let imageUrl = URL(string: imageUrlString) else {
+                  print("Invalid data or URL string")
+                  return
+              }
+
+              URLSession.shared.dataTask(with: imageUrl) { data, response, error in
+                  if let error = error {
+                      print("Failed to load image: \(error)")
+                      return
+                  }
+
+                  guard let data = data, let image = UIImage(data: data) else {
+                      print("Failed to decode image data")
+                      return
+                  }
+
+                  DispatchQueue.main.async {
+                      self?.personImageView.image = image
+                  }
+              }.resume()
+          }.resume()
+      }
+    private func displayUserData() {
+            let userDefaults = UserDefaults.standard
+            
+            if let name = userDefaults.string(forKey: "userName"){
+                personNameLabel.text = name
+            } else {
+                personNameLabel.text = "Name: N/A"
+            }
+        }
 }
 
 extension ListAchievsVC: UITableViewDataSource, UITableViewDelegate {

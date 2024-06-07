@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="dfW-nq-0FP" kind="relationship" relationship="rootViewController" id="HVx-3q-e86"/>
+                        <segue destination="dfW-nq-0FP" kind="relationship" relationship="rootViewController" id="riJ-bq-hFI"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOZ-Rg-euc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -272,13 +272,13 @@
         <!--Sign Up View-->
         <scene sceneID="o2R-Pt-CRE">
             <objects>
-                <viewController id="t21-3F-zzH" customClass="SignUpView" customModule="BlockHub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpView" id="t21-3F-zzH" customClass="SignUpView" customModule="BlockHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q2j-vi-0Yv">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Welcome to BlockHub Online  Learning Platform" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1xA-MJ-TiO">
-                                <rect key="frame" x="74" y="158" width="240" height="103"/>
+                                <rect key="frame" x="74" y="114" width="240" height="147"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Qgr-bF-iN8"/>
                                     <constraint firstAttribute="height" constant="103" id="jYM-o4-KG7"/>
@@ -408,7 +408,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="IconBlock" translatesAutoresizingMaskIntoConstraints="NO" id="yQh-fD-OsK">
-                                <rect key="frame" x="144" y="91" width="100" height="59"/>
+                                <rect key="frame" x="144" y="47" width="100" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="37I-Sz-WuI"/>
                                     <constraint firstAttribute="width" constant="100" id="Z1D-kP-2c5"/>
@@ -432,7 +432,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="signInButton:" destination="t21-3F-zzH" eventType="touchUpInside" id="Vai-bu-fbR"/>
-                                            <segue destination="5p4-yV-xGo" kind="show" id="FwZ-ex-1CW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -445,7 +444,7 @@
                                 <rect key="frame" x="42" y="549" width="305" height="46"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ktm-nv-Q7L">
-                                        <rect key="frame" x="8" y="6.6666666666666288" width="30" height="35"/>
+                                        <rect key="frame" x="8" y="6.6666666666666856" width="30" height="35"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="rwq-Yd-hH4"/>
@@ -571,7 +570,7 @@
         <!--Log In View-->
         <scene sceneID="bP0-ay-bh2">
             <objects>
-                <viewController id="BkU-vV-SNM" customClass="LogInView" customModule="BlockHub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogInView" id="BkU-vV-SNM" customClass="LogInView" customModule="BlockHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yy3-vM-HHN">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -733,7 +732,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="signUpButtonAction:" destination="BkU-vV-SNM" eventType="touchUpInside" id="EGt-yU-1xw"/>
-                                    <segue destination="t21-3F-zzH" kind="show" id="niv-ff-Tdy"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="IconBlock" translatesAutoresizingMaskIntoConstraints="NO" id="jyJ-jC-wKO">
@@ -803,9 +801,11 @@
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="oGk-ib-rqi"/>
                     <connections>
+                        <outlet property="emailField" destination="TGc-bS-s5B" id="Zxt-KR-a7e"/>
                         <outlet property="emailLabel" destination="p0A-m4-1fc" id="Tpt-wp-65N"/>
                         <outlet property="emailViewCorner" destination="B2A-oB-bkF" id="ErD-7Y-dMZ"/>
                         <outlet property="forgotPasswordUI" destination="ifW-U1-JPY" id="2Yb-bv-tzQ"/>
+                        <outlet property="passwordField" destination="Ast-DQ-fxf" id="mnI-BX-5by"/>
                         <outlet property="passwordLabel" destination="u8T-QX-swY" id="oiT-X8-fJE"/>
                         <outlet property="passwordViewCorner" destination="d2P-5x-MJR" id="fkz-2O-eXz"/>
                         <outlet property="signInButtonUI" destination="7zH-W1-pDn" id="zWN-un-go8"/>
@@ -828,7 +828,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wvO-VT-Ics">
-                                <rect key="frame" x="0.0" y="104" width="390" height="657"/>
+                                <rect key="frame" x="0.0" y="60" width="390" height="701"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoursesTableViewCell" id="1vZ-zs-0Cz">
@@ -842,7 +842,7 @@
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lVm-V1-DE9">
-                                <rect key="frame" x="0.0" y="48" width="390" height="56"/>
+                                <rect key="frame" x="0.0" y="4" width="390" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="bjy-PK-1dp" id="ZTl-rF-3kd"/>
@@ -874,7 +874,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Q4i-5w-PF0">
             <objects>
-                <tabBarController interactionActivityTrackingBaseName="ProfileView" id="5p4-yV-xGo" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabbar" interactionActivityTrackingBaseName="ProfileView" id="5p4-yV-xGo" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="4ra-e3-Z0c"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jeW-gf-XqS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -964,14 +964,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="LZD-os-3RY">
-                                <rect key="frame" x="0.0" y="58" width="390" height="44"/>
+                                <rect key="frame" x="0.0" y="14" width="390" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="iMn-D9-vek"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="E9y-1u-Uzl">
-                                <rect key="frame" x="0.0" y="127" width="390" height="634"/>
+                                <rect key="frame" x="0.0" y="83" width="390" height="678"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsTableViewCell" id="xwP-m1-aqJ">
@@ -985,7 +985,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BlockHub News" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thp-os-Xrz">
-                                <rect key="frame" x="0.0" y="102" width="390" height="43"/>
+                                <rect key="frame" x="0.0" y="58" width="390" height="87"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1896,7 +1896,7 @@
             </objects>
             <point key="canvasLocation" x="3673.8461538461538" y="2143.3649289099526"/>
         </scene>
-        <!--Item-->
+        <!--Test-->
         <scene sceneID="MUJ-Oz-Sfl">
             <objects>
                 <viewController id="1R4-jX-zPC" customClass="TestVC" customModule="BlockHub" customModuleProvider="target" sceneMemberID="viewController">
@@ -1913,7 +1913,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MA4-1j-xh7">
-                                <rect key="frame" x="143" y="307" width="66" height="35"/>
+                                <rect key="frame" x="143" y="263" width="66" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Show"/>
                                 <connections>
@@ -1921,13 +1921,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vu-PJ-t6M">
-                                <rect key="frame" x="84" y="372" width="270" height="94"/>
+                                <rect key="frame" x="84" y="328" width="270" height="138"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdC-0R-8WO">
-                                <rect key="frame" x="112" y="120" width="186" height="35"/>
+                                <rect key="frame" x="112" y="76" width="186" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="TestNewsNotification"/>
                                 <connections>
@@ -1935,7 +1935,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpZ-ak-4Ek">
-                                <rect key="frame" x="133" y="171" width="144" height="35"/>
+                                <rect key="frame" x="133" y="127" width="144" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="TestNewXourse"/>
                                 <connections>
@@ -1943,7 +1943,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFB-F2-Vif">
-                                <rect key="frame" x="131" y="214" width="131" height="35"/>
+                                <rect key="frame" x="131" y="170" width="131" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Testmycourse"/>
                                 <connections>
@@ -1951,7 +1951,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eim-AQ-ZIa">
-                                <rect key="frame" x="141.66666666666666" y="249" width="110" height="35"/>
+                                <rect key="frame" x="141.66666666666666" y="205" width="110" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Testupdate"/>
                                 <connections>
@@ -1982,7 +1982,9 @@
                             <constraint firstItem="mpZ-ak-4Ek" firstAttribute="top" secondItem="VdC-0R-8WO" secondAttribute="bottom" constant="16" id="yqO-LX-aQf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="URV-ea-4yg"/>
+                    <tabBarItem key="tabBarItem" title="Test" image="wrench.and.screwdriver.fill" catalog="system" id="URV-ea-4yg">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="SSu-Ug-LlE"/>
                     <connections>
                         <outlet property="testlabel" destination="4Vu-PJ-t6M" id="uEG-oP-eji"/>
@@ -2155,6 +2157,7 @@
         <image name="profile_icon" width="512" height="512"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="trophy.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="wrench.and.screwdriver.fill" catalog="system" width="128" height="119"/>
         <image name="xmark.seal.fill" catalog="system" width="128" height="124"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

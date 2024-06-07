@@ -24,8 +24,14 @@ class MyCourseView: UIViewController {
             tableView.dataSource = self
             tableView.delegate = self
             tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
-            localizedMyCourses.text = "my_courses".localized
+            updateUI()
         }
+    func updateUI(){
+        let backButton = UIBarButtonItem()
+                backButton.title = ""
+                self.navigationItem.backBarButtonItem = backButton
+        localizedMyCourses.text = "my_courses".localized
+    }
     }
 
 extension MyCourseView: UITableViewDataSource {

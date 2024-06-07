@@ -10,38 +10,67 @@ import CoreData
 import UserNotifications
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate  {
 
     var window: UIWindow?
 
-        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-            
-            // Set the back button color to black globally
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
             UINavigationBar.appearance().tintColor = .black
             UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
-                        if granted {
-                            print("Permission granted")
-                        } else if let error = error {
-                            print("Error: \(error.localizedDescription)")
-                        }
-                    }
+                if granted {
+                    UNUserNotificationCenter.current().delegate = self
+                    print("Permission granted")
+                } else if let error = error {
+                    print("Error: \(error.localizedDescription)")
+                }
+            }
             return true
         }
 
-    // MARK: UISceneSession Lifecycle
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        if #available(iOS 14.0, *) {
-            completionHandler([.banner, .list, .sound])
-        } else {
-            completionHandler([.alert, .sound])
+            if #available(iOS 14.0, *) {
+                completionHandler([.banner, .list, .sound])
+            } else {
+                completionHandler([.alert, .sound])
+            }
         }
-    }
 
-    // Обработка уведомлений при нажатии на уведомление
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        // Обработка действия
-        completionHandler()
-    }
+        // Обработка уведомлений при нажатии на уведомление
+        func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+            // Обработка действия
+            completionHandler()
+        }
+
+        func scheduleDynamicNotifications() {
+            let registrations = CourseManager.shared.loadRegistrations()
+            for registration in registrations {
+                // Пример уведомления через 3 дня после регистрации
+                let reminderMessage = getRandomMessage(from: NotificationTemplates.newsPush)
+                scheduleNotification(title: "Напоминание", body: reminderMessage, date: Calendar.current.date(byAdding: .day, value: 3, to: registration.registrationDate)!, identifier: "reminder_\(registration.courseId)_3days")
+                
+                // Пример уведомления за день до дедлайна
+                let deadlineMessage = getRandomMessage(from: NotificationTemplates.myCourse)
+                scheduleNotification(title: "Дедлайн", body: deadlineMessage, date: Calendar.current.date(byAdding: .day, value: -1, to: registration.deadlineDate)!, identifier: "reminder_\(registration.courseId)_1day_before_deadline")
+            }
+        }
+
+        func scheduleNotification(title: String, body: String, date: Date, identifier: String) {
+            let content = UNMutableNotificationContent()
+            content.title = title
+            content.body = body
+            content.sound = .default
+
+            let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+
+            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+
+            UNUserNotificationCenter.current().add(request) { error in
+                if let error = error {
+                    print("Error: \(error.localizedDescription)")
+                }
+            }
+        }
     
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class TestVC: UIViewController {
 
@@ -43,24 +44,25 @@ class TestVC: UIViewController {
     
     
     @IBAction func TestNewsPush(_ sender: Any) {
-        scheduleNotification(title: "🔥 Горячие новости!", body: "Не пропустите последние обновления в мире блокчейна.", identifier: "newsPush")
-
-    }
+        let message = getRandomMessage(from: NotificationTemplates.newsPush)
+                scheduleNotification(title: "🔥 Горячие новости!", body: message, identifier: "newsPush")
+            }
     
     @IBAction func TestNewCourse(_ sender: Any) {
-        scheduleNotification(title: "🎓 Новый курс доступен!", body: "[Название курса]. Начните обучение сегодня!", identifier: "newCourse")
-
-    }
+        let message = getRandomMessage(from: NotificationTemplates.newCourse)
+                scheduleNotification(title: "🎓 Новый курс доступен!", body: message, identifier: "newCourse")
+            }
     
     @IBAction func TestMyCourse(_ sender: Any) {
-        scheduleNotification(title: "📈 Вы продвинулись в курсе!", body: "[Название курса]! Продолжайте в том же духе.", identifier: "myCourse")
+        let message = getRandomMessage(from: NotificationTemplates.myCourse)
+                scheduleNotification(title: "📈 Вы продвинулись в курсе!", body: message, identifier: "myCourse")
+            }
 
-    }
     
     @IBAction func TestUpdate(_ sender: Any) {
-        scheduleNotification(title: "🚀 Новое обновление приложения!", body: "Улучшения и новые функции уже доступны.", identifier: "update")
-
-    }
+        let message = getRandomMessage(from: NotificationTemplates.update)
+                scheduleNotification(title: "🚀 Новое обновление приложения!", body: message, identifier: "update")
+            }
     
     
     func requestNotificationPermission() {

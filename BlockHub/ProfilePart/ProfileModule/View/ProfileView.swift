@@ -24,7 +24,8 @@ class ProfileView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-      
+        displayUserData()
+        fetchProfileImage()
     }
     
     func updateUI(){
@@ -37,12 +38,19 @@ class ProfileView: UIViewController {
             notifationButtonUI.backgroundColor = gradientColor
             lauguagesButtonUI.backgroundColor = gradientColor
         }
+        let backButton = UIBarButtonItem()
+                backButton.title = ""
+                self.navigationItem.backBarButtonItem = backButton
     }
     
     @IBAction func achievementsButtonAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let listAchievsVC = storyboard.instantiateViewController(withIdentifier: "ListAchievsVC") as? ListAchievsVC {
-                navigationController?.pushViewController(listAchievsVC, animated: true)
+                if let navController = self.navigationController {
+                    navController.pushViewController(listAchievsVC, animated: true)
+                } else {
+                    print("Navigation controller is not available")
+                }
             }
     }
     
@@ -116,13 +124,67 @@ class ProfileView: UIViewController {
     
     @IBAction func calendarButtonAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let listAchievsVC = storyboard.instantiateViewController(withIdentifier: "CalendarViewController") as? CalendarViewController {
-                navigationController?.pushViewController(listAchievsVC, animated: true)
+            if let calendarVC = storyboard.instantiateViewController(withIdentifier: "CalendarViewController") as? CalendarViewController {
+                if let navController = self.navigationController {
+                    navController.pushViewController(calendarVC, animated: true)
+                } else {
+                    print("Navigation controller is not available")
+                }
             }
     }
     
+    private func displayUserData() {
+            let userDefaults = UserDefaults.standard
+            
+            if let name = userDefaults.string(forKey: "userName"),
+               let email = userDefaults.string(forKey: "userEmail") {
+                
+                profileFullNameLabel.text = name
+                profileEmailLabel.text = email
+            } else {
+                profileFullNameLabel.text = "Name: N/A"
+                profileEmailLabel.text = "Email: N/A"
+            }
+        }
     
-    
-    
+    private func fetchProfileImage() {
+          guard let token = TokenStorageService.shared.getToken() else {
+              print("No token found")
+              return
+          }
+
+          let url = URL(string: "https://educationplatform-juhi.onrender.com/api/v1/user/image")!
+          var request = URLRequest(url: url)
+          request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+          request.httpMethod = "GET"
+
+          URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+              if let error = error {
+                  print("Failed to fetch profile image: \(error)")
+                  return
+              }
+
+              guard let data = data, let imageUrlString = String(data: data, encoding: .utf8), let imageUrl = URL(string: imageUrlString) else {
+                  print("Invalid data or URL string")
+                  return
+              }
+
+              URLSession.shared.dataTask(with: imageUrl) { data, response, error in
+                  if let error = error {
+                      print("Failed to load image: \(error)")
+                      return
+                  }
+
+                  guard let data = data, let image = UIImage(data: data) else {
+                      print("Failed to decode image data")
+                      return
+                  }
+
+                  DispatchQueue.main.async {
+                      self?.profileImageView.image = image
+                  }
+              }.resume()
+          }.resume()
+      }
     
 }

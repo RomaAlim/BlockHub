@@ -23,6 +23,8 @@ class MainMenuView: UIViewController {
         
         updateUI()
         updateLocalizable()
+        let testPassword = "Test2003@"
+        print("Password is valid: \(testPassword.isValidPassword())") // Ожидаемый результат: true
     }
 
     
