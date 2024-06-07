@@ -11,6 +11,7 @@ class NewsView: UIViewController{
 
     @IBOutlet weak var NewsSearchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var NewstextLabel: UILabel!
     
     var newsArray = [
            News(id: 1, title: "News Title 1", description: "Description for news 1."),
@@ -32,6 +33,7 @@ class NewsView: UIViewController{
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsTableViewCell")
+        NewstextLabel.text = "blockhub_news".localized
     }
   
 }

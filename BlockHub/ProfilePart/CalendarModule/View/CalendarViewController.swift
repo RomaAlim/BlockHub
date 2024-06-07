@@ -10,6 +10,13 @@ import UIKit
 class CalendarViewController:  UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var week1: UILabel!
+    @IBOutlet weak var week2: UILabel!
+    @IBOutlet weak var week3: UILabel!
+    @IBOutlet weak var week4: UILabel!
+    @IBOutlet weak var week5: UILabel!
+    @IBOutlet weak var week6: UILabel!
+    @IBOutlet weak var week7: UILabel!
     
     var selectedDate = Date()
         var totalSquares = [String]()
@@ -20,9 +27,9 @@ class CalendarViewController:  UIViewController, UICollectionViewDataSource, UIC
             collectionView.delegate = self
             setCellsView()
             setMonthView()
-            
+            updateLocalize()
             NotificationCenter.default.addObserver(self, selector: #selector(reloadCalendar), name: NSNotification.Name("reloadCalendar"), object: nil)
-
+            
         }
         
     func setCellsView() {
@@ -68,7 +75,7 @@ class CalendarViewController:  UIViewController, UICollectionViewDataSource, UIC
         let calendar = Calendar.current
         let cellDateComponents = DateComponents(year: calendar.component(.year, from: selectedDate),
                                                 month: calendar.component(.month, from: selectedDate),
-                                                day: Int(day ?? "0") ?? 0)
+                                                day: Int(day) ?? 0)
         
         if let cellDate = calendar.date(from: cellDateComponents) {
             let currentDate = Date()
@@ -131,5 +138,14 @@ class CalendarViewController:  UIViewController, UICollectionViewDataSource, UIC
     
     @objc func reloadCalendar() {
         setMonthView()
+    }
+    func updateLocalize(){
+        week1.text = "sun".localized
+        week2.text = "mon".localized
+        week3.text = "tue".localized
+        week4.text = "wed".localized
+        week5.text = "thu".localized
+        week6.text = "fri".localized
+        week7.text = "sat".localized
     }
 }

@@ -22,6 +22,7 @@ class MainMenuView: UIViewController {
         super.viewDidLoad()
         
         updateUI()
+        updateLocalizable()
     }
 
     
@@ -42,9 +43,10 @@ class MainMenuView: UIViewController {
     }
     
     func updateLocalizable(){
-        signInButtonUI.titleLabel?.text = "signin".localized
+        signInButtonUI.titleLabel?.text  = "signin".localized
         sendButtonUI.titleLabel?.text = "send".localized
-        computerText.text = "welcome".localized
+        computerText.text = "learn_skills".localized
+        subscribetoourLabel.text = "subscribe_newsletter".localized
     }
 }
 

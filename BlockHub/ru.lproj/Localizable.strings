@@ -34,3 +34,26 @@
 "course_objectives" = "Цели курса:";
 "what_will_you_learn" = "Что вы узнаете:";
 "lesson_contains" = "Этот урок содержит.";
+
+"Select Language" = "Выбор языка";
+"You have selected Kazakh language." = "Вы выбрали казахский язык.";
+"You have selected Russian language." = "Вы выбрали русский язык.";
+"You have selected English language." = "Вы выбрали английский язык.";
+"On" = "Включить";
+"Off" = "Выключить";
+"Cancel" = "Отмена";
+
+"sun" = "Вс";
+"mon" = "Пн";
+"tue" = "Вт";
+"wed" = "Ср";
+"thu" = "Чт";
+"fri" = "Пт";
+"sat" = "Сб";
+
+"continue" = "Продолжить";
+"in_progress" = "В процессе";
+"course_information" = "Информация о курсе";
+"passed" = "Пройдено";
+"step" = "Шаг";
+"of" = " ";

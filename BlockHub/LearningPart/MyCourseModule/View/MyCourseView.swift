@@ -10,6 +10,7 @@ import UIKit
 class MyCourseView: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var localizedMyCourses: UILabel!
     
     let courses = [
         MyCourse(name: "Blockchain BASICS", numberOfLessons: 62, completedLessons: 6),
@@ -23,6 +24,7 @@ class MyCourseView: UIViewController {
             tableView.dataSource = self
             tableView.delegate = self
             tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
+            localizedMyCourses.text = "my_courses".localized
         }
     }
 

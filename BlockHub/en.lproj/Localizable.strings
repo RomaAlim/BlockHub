@@ -33,3 +33,26 @@
 "course_objectives" = "Course Objectives:";
 "what_will_you_learn" = "What will you learn:";
 "lesson_contains" = "This lesson contains.";
+
+"Select Language" = "Select Language";
+"You have selected Kazakh language." = "You have selected Kazakh language.";
+"You have selected Russian language." = "You have selected Russian language.";
+"You have selected English language." = "You have selected English language.";
+"On" = "On";
+"Off" = "Off";
+"Cancel" = "Cancel";
+
+"sun" = "Sun";
+"mon" = "Mon";
+"tue" = "Tue";
+"wed" = "Wed";
+"thu" = "Thur";
+"fri" = "Fri";
+"sat" = "Sat";
+
+"continue" = "Continue";
+"in_progress" = "In Progress";
+"course_information" = "Course Information";
+"passed" = "Passed";
+"step" = "Step";
+"of" = "of";

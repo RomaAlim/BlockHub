@@ -52,7 +52,7 @@ class ListAchievsVC: UIViewController {
         personImageView.layer.cornerRadius = personImageView.frame.size.width / 2
         personImageView.clipsToBounds = true
         
-        
+        achiveTextLabel.text = "achievements".localized
     }
         func loadAchievements() {
             // Пример заполнения массива достижений
@@ -88,8 +88,8 @@ class ListAchievsVC: UIViewController {
                 sucessAchiveButtonUI.tintColor = .link
                 notSucessAchiveButtonUI.tintColor = .gray
             } else {
-                sucessAchiveButtonUI.tintColor = .link
-                notSucessAchiveButtonUI.tintColor = .blue
+                sucessAchiveButtonUI.tintColor = .gray
+                notSucessAchiveButtonUI.tintColor = .link
             }
         }
     

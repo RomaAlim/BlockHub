@@ -20,16 +20,21 @@ class AboutCourseView: UIViewController {
     @IBOutlet weak var learningPlanField: UITextView!
     @IBOutlet weak var registrationButtonUI: UIButton!
     @IBOutlet weak var viewColorEditeted: UIView!
+    @IBOutlet weak var localizedObjective: UILabel!
+    @IBOutlet weak var localizedDesription: UILabel!
+    @IBOutlet weak var localizedPlan: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = .black
         updateUI()
+        updateLocalizable()
     }
     
     @IBAction func registrationButtonAction(_ sender: Any) {
         showRegistrationAlert()
+        
     }
     
     
@@ -65,4 +70,10 @@ class AboutCourseView: UIViewController {
             self.present(alertController, animated: true, completion: nil)
             CourseManager.shared.saveRegistration(courseId: "course123")
         }
+    func updateLocalizable(){
+        localizedPlan.text = "course_objectives".localized
+        localizedObjective.text = "objectives".localized
+        localizedDesription.text = "descriptions".localized
+        registrationButtonUI.titleLabel?.text = "registration_course".localized
+    }
 }

@@ -18,12 +18,19 @@ class SignUpView: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var signUoButton: UIButton!
+    @IBOutlet weak var welcometoLabel: UITextView!
+    @IBOutlet weak var signinwithGoogleLabel: UILabel!
+    @IBOutlet weak var fullnameLabel: UILabel!
+    @IBOutlet weak var emailLAbel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var alreadyhaveaccountLabel: UILabel!
+    @IBOutlet weak var signInUI: UIButton!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        updateLocalizable()
         updateUI()
     }
     
@@ -43,5 +50,17 @@ class SignUpView: UIViewController {
         nameViewCorner.layer.cornerRadius = 10
         googleButton.layer.cornerRadius = 10
         signUoButton.layer.cornerRadius = 10
+    }
+    func updateLocalizable(){
+        welcometoLabel.text = "welcome".localized
+        signUoButton.titleLabel?.text = "signup".localized
+        signinwithGoogleLabel.text = "signin_email".localized
+        fullnameLabel.text = "fullname".localized
+        emailLAbel.text = "email".localized
+        passwordLabel.text = "password".localized
+        googleButton.titleLabel?.text = "signin_google".localized
+        alreadyhaveaccountLabel.text = "already_have_account".localized
+        signInUI.titleLabel?.text = "signin".localized
+        
     }
 }

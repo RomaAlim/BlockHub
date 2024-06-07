@@ -30,6 +30,7 @@ class CompletingViewController: UIViewController {
             tableView.dataSource = self
             tableView.delegate = self
             tableView.register(UINib(nibName: "CompletingTableViewCell", bundle: nil), forCellReuseIdentifier: "CompletingTableViewCell")
+            updateUI()
         }
     
     func updateUI(){
@@ -44,7 +45,9 @@ class CompletingViewController: UIViewController {
         if let gradientColor = UIView.createGradientBackground() {
             sectionNameLabel.textColor = gradientColor
         }
-
+        Desctiption1Label.text = "course_objectives".localized
+        description2Label.text = "what_will_you_learn".localized
+        LessonContainsLAbel.text = "lesson_contains".localized
     }
     }
 

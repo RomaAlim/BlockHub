@@ -19,6 +19,7 @@ class QuizVC: UIViewController {
     @IBOutlet weak var QuestionLabel4: UIButton!
     @IBOutlet weak var NoneButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var localizedAnswerAnd: UILabel!
     
     
     var questions: [Question] = [
@@ -38,10 +39,11 @@ class QuizVC: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             updateUI()
-    
+            updateLocalizable()
         }
         
     func updateUI() {
+            nextButton.titleLabel?.text = "next".localized
             let currentQuestion = questions[currentQuestionIndex]
             questionLabel.text = currentQuestion.questionText
             QuestionLabel1.setTitle(currentQuestion.options[0], for: .normal)
@@ -57,7 +59,7 @@ class QuizVC: UIViewController {
             testProgressView.setProgress(progress, animated: true)
             
             // Update question number label
-            numberOfQuestion.text = "Step \(currentQuestionIndex + 1) of \(questions.count)"
+        numberOfQuestion.text = "\("step".localized) \(currentQuestionIndex + 1) \("of".localized) \(questions.count)"
             
             // Disable Next button initially
             nextButton.isEnabled = false
@@ -139,4 +141,10 @@ class QuizVC: UIViewController {
         }
             nextButton.isEnabled = true
         }
+    func updateLocalizable(){
+        localizedAnswerAnd.text = "answer_get_points".localized
+        nextButton.titleLabel?.text = "next".localized
+        NoneButton.titleLabel?.text = "none".localized
+        
+    }
 }

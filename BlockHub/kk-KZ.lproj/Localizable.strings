@@ -13,12 +13,12 @@
 "send" = "Жіберу";
 "emailaddress" = "Электрондық пошта мекенжайы";
 "signin_google" = "Google арқылы кіру";
-"signin_email" = "Немесе электрондық пошта арқылы кіріңіз";
+"signin_email" = "Электрондық пошта арқылы кіріңіз";
 "email" = "Электрондық пошта";
 "password" = "Құпия сөз";
 "signup" = "Тіркелу";
-"forgot_password" = "Құпия сөзді ұмыттыңыз ба";
-"fullname" = "Толық аты";
+"forgot_password" = "Құпия сөзді ұмыттыңыз ба?";
+"fullname" = "Толық атыңыз";
 "already_have_account" = "Аккаунтыңыз бар ма?";
 "achievements" = "Жетістіктер";
 "calendar" = "Күнтізбе";
@@ -34,3 +34,26 @@
 "course_objectives" = "Курс мақсаттары:";
 "what_will_you_learn" = "Сіз не үйренесіз:";
 "lesson_contains" = "Бұл сабақта мыналар бар.";
+
+"Select Language" = "Тілді таңдау";
+"You have selected Kazakh language." = "Сіз қазақ тілін таңдадыңыз.";
+"You have selected Russian language." = "Сіз орыс тілін таңдадыңыз.";
+"You have selected English language." = "Сіз ағылшын тілін таңдадыңыз.";
+"On" = "Қосу";
+"Off" = "Өшіру";
+"Cancel" = "Бас тарту";
+
+"sun" = "Жек";
+"mon" = "Дүй";
+"tue" = "Сей";
+"wed" = "Сәр";
+"thu" = "Бей";
+"fri" = "Жұм";
+"sat" = "Сен";
+
+"continue" = "Жалғастыру";
+"in_progress" = "Үрдісте";
+"course_information" = "Курс туралы ақпарат";
+"passed" = "Өтті";
+"step" = "Қадам";
+"of" = " ";

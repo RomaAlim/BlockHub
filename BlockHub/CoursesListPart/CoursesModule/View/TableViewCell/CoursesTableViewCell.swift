@@ -57,6 +57,6 @@ class CoursesTableViewCell: UITableViewCell {
             costListCourses.textColor = gradientColor
             registrationButton.setTitleColor(gradientColor, for: .normal)
         }
-
+        registrationButton.titleLabel?.text = "registration_course".localized
     }
 }

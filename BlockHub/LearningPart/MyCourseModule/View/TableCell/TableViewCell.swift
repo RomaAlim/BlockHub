@@ -51,12 +51,13 @@ class TableViewCell: UITableViewCell {
             NextButton.backgroundColor = gradientColor
         }
     
-
-        }
+        NextButton.titleLabel?.text = "continue".localized
+        CourseInformation.titleLabel?.text = "course_information".localized
+    }
     
     func configure(with course: MyCourse) {
             NameOfEducation.text = course.name
-            passedLabelStatus.text = course.isPassed ? "Passed" : "In Progress"
+            passedLabelStatus.text = course.isPassed ? "passed".localized : "in_progress".localized
             
             if course.isPassed {
                 checkMarkStatus.tintColor = .green
