@@ -49,6 +49,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="newsTitleTextView" destination="EjU-n3-AyG" id="8rp-nc-A7G"/>
+                <outlet property="viewsLabel" destination="hxI-8p-8zr" id="8uM-e1-cxj"/>
             </connections>
             <point key="canvasLocation" x="183.20610687022901" y="25"/>
         </tableViewCell>

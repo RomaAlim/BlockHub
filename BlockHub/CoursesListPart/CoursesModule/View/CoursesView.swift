@@ -20,6 +20,7 @@ class CoursesView: UIViewController, CoursesTableDelegate {
            tableView.delegate = self
            tableView.register(UINib(nibName: "CoursesTableViewCell", bundle: nil), forCellReuseIdentifier: "CoursesTableViewCell")
            loadCourses()
+           
        }
        
        override func viewWillAppear(_ animated: Bool) {
@@ -102,17 +103,18 @@ class CoursesView: UIViewController, CoursesTableDelegate {
        }
    }
 
-   extension CoursesView: CoursesTableViewCellDelegate {
-       func didTapRegisterButton(cell: CoursesTableViewCell) {
-           guard let indexPath = tableView.indexPath(for: cell) else { return }
-           // let selectedCourse = courses[indexPath.row]
-           
-           // Instantiate and navigate to the AboutCourseView
-           let storyboard = UIStoryboard(name: "Main", bundle: nil)
-           if let aboutCourseVC = storyboard.instantiateViewController(withIdentifier: "AboutCourseView") as? AboutCourseView {
-               // Pass data to AboutCourseView if needed
-               // aboutCourseVC.course = selectedCourse
-               navigationController?.pushViewController(aboutCourseVC, animated: true)
-           }
-       }
-   }
+extension CoursesView: CoursesTableViewCellDelegate {
+    func didTapRegisterButton(cell: CoursesTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        let selectedCourse = courses[indexPath.row]
+        
+        // Instantiate and navigate to the AboutCourseView
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let aboutCourseVC = storyboard.instantiateViewController(withIdentifier: "AboutCourseView") as? AboutCourseView {
+            // Pass the course ID to AboutCourseView
+            aboutCourseVC.courseID = selectedCourse.id
+            navigationController?.pushViewController(aboutCourseVC, animated: true)
+        }
+    }
+}
+

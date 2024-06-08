@@ -34,10 +34,8 @@ class ChaptersTableCell: UITableViewCell {
         // Additional customization (optional)
         ViewCornerUI.layer.masksToBounds = true
     
-        // Применение градиента к тексту someLabel
-        if let gradientColor = UIView.createGradientBackground() {
-            chapterTitleUI.textColor = gradientColor
-        }
+            chapterTitleUI.textColor = .link
+        
 
     }
 }

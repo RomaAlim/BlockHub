@@ -14,8 +14,8 @@ class NewsView: UIViewController{
     @IBOutlet weak var NewstextLabel: UILabel!
     
     var newsArray = [News]()
-    
-    override func viewDidLoad() {
+
+        override func viewDidLoad() {
             super.viewDidLoad()
             
             tableView.dataSource = self
@@ -25,12 +25,14 @@ class NewsView: UIViewController{
             updateUI()
             fetchNews()
         }
-    func updateUI(){
-        let backButton = UIBarButtonItem()
-                backButton.title = ""
-                self.navigationItem.backBarButtonItem = backButton
-        NewstextLabel.text = "blockhub_news".localized
-    }
+
+        func updateUI() {
+            let backButton = UIBarButtonItem()
+            backButton.title = ""
+            self.navigationItem.backBarButtonItem = backButton
+            NewstextLabel.text = "blockhub_news".localized
+        }
+
         private func fetchNews() {
             NewsService.shared.fetchAllNews { result in
                 switch result {
@@ -41,6 +43,37 @@ class NewsView: UIViewController{
                     print("Failed to fetch news:", error)
                 }
             }
+        }
+
+        private func getInitialViews(for newsId: Int) -> Int {
+            let viewsKey = "news_\(newsId)_views"
+            if let views = UserDefaults.standard.value(forKey: viewsKey) as? Int {
+                return views
+            } else {
+                let initialViews = Int.random(in: 40...50)
+                UserDefaults.standard.set(initialViews, forKey: viewsKey)
+                return initialViews
+            }
+        }
+
+        private func incrementViews(for newsId: Int) {
+            let viewsKey = "news_\(newsId)_views"
+            if var views = UserDefaults.standard.value(forKey: viewsKey) as? Int {
+                views += 1
+                UserDefaults.standard.set(views, forKey: viewsKey)
+            }
+        }
+
+        private func formatDate(_ dateString: String) -> String {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            
+            if let date = dateFormatter.date(from: dateString) {
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                return dateFormatter.string(from: date)
+            }
+            
+            return dateString
         }
     }
 
@@ -55,7 +88,16 @@ class NewsView: UIViewController{
             }
             
             let newsItem = newsArray[indexPath.row]
-            cell.newsTitleTextView.text = "\(newsItem.title)\n\(newsItem.subtitle)"
+            let views = getInitialViews(for: newsItem.id)
+            let formattedDate = formatDate(newsItem.datePublished)
+            
+            let text = """
+            \(newsItem.title)
+            \(newsItem.subtitle)
+            \(formattedDate)
+            """
+            cell.newsTitleTextView.text = text
+            cell.viewsLabel.text = "\(views)"
             
             return cell
         }
@@ -65,11 +107,18 @@ class NewsView: UIViewController{
         }
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            tableView.deselectRow(at: indexPath, animated: true)
+            let newsItem = newsArray[indexPath.row]
+            incrementViews(for: newsItem.id)
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let selectedNewsVC = storyboard.instantiateViewController(withIdentifier: "SelectedNewsVC") as? SelectedNewsVC {
+                //selectedNewsVC.newsItem = newsItem
                 navigationController?.pushViewController(selectedNewsVC, animated: true)
             }
+        }
+
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            tableView.reloadData()
         }
     }

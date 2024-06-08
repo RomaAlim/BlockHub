@@ -35,9 +35,7 @@ class CompletingTableViewCell: UITableViewCell {
     
     func updateUI(){
         viewEditedCorner.layer.cornerRadius = 20
-        if let gradientColor = UIView.createGradientBackground() {
-            nameTypeLabel.textColor = gradientColor
-        }
+        nameTypeLabel.textColor = .link
 
     }
 

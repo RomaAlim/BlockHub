@@ -12,4 +12,5 @@ struct LessonItem {
     let image: UIImage
     let name: String
     let type: String
+    let fileKey: String? // This holds the file key for presentations
 }

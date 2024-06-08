@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="127" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="BlockHub" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="380" height="127"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="122" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="BlockHub" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="122"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="380" height="127"/>
+                <rect key="frame" x="0.0" y="0.0" width="380" height="122"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of education" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMS-HW-QVd">
@@ -24,26 +24,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efa-h2-GuI">
-                        <rect key="frame" x="69" y="54" width="291" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxc-JR-V4l">
-                        <rect key="frame" x="189" y="90" width="171" height="28"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Course information">
-                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </buttonConfiguration>
-                        <connections>
-                            <action selector="CourseInformationButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Eny-5s-9MM"/>
-                        </connections>
-                    </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUu-Rs-3in">
-                        <rect key="frame" x="20" y="90" width="99" height="28"/>
+                        <rect key="frame" x="20" y="54" width="130" height="52"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="linkColor"/>
                         <state key="normal" title="Button"/>
@@ -55,18 +37,27 @@
                         </connections>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qqY-WV-roZ">
-                        <rect key="frame" x="23" y="44" width="38" height="38"/>
+                        <rect key="frame" x="350" y="17" width="23" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="tintColor" systemColor="systemGreenColor"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxc-JR-V4l">
+                        <rect key="frame" x="189" y="54" width="171" height="52"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Course information">
+                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="CourseInformationButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Eny-5s-9MM"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="wMS-HW-QVd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="OaY-zj-18Z"/>
                     <constraint firstAttribute="trailing" secondItem="wMS-HW-QVd" secondAttribute="trailing" constant="20" symbolic="YES" id="SIS-WD-Lk0"/>
-                    <constraint firstAttribute="trailing" secondItem="efa-h2-GuI" secondAttribute="trailing" constant="20" symbolic="YES" id="Tc2-s2-HAG"/>
-                    <constraint firstItem="efa-h2-GuI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="69" id="gLx-tA-pHT"/>
                     <constraint firstItem="wMS-HW-QVd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="p2n-IG-ZYe"/>
-                    <constraint firstItem="efa-h2-GuI" firstAttribute="top" secondItem="wMS-HW-QVd" secondAttribute="bottom" constant="13" id="yES-jm-BJ0"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -75,9 +66,8 @@
                 <outlet property="NameOfEducation" destination="wMS-HW-QVd" id="cIo-Zd-Ex9"/>
                 <outlet property="NextButton" destination="iUu-Rs-3in" id="YUq-2X-lr9"/>
                 <outlet property="checkMarkStatus" destination="qqY-WV-roZ" id="eyb-MU-6F6"/>
-                <outlet property="passedLabelStatus" destination="efa-h2-GuI" id="HK9-7z-u7M"/>
             </connections>
-            <point key="canvasLocation" x="175.57251908396947" y="16.549295774647888"/>
+            <point key="canvasLocation" x="175.57251908396947" y="14.788732394366198"/>
         </tableViewCell>
     </objects>
     <resources>

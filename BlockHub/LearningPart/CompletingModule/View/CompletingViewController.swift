@@ -18,37 +18,68 @@ class CompletingViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
-    var lessonItems: [LessonItem] = [
-            LessonItem(image: UIImage(systemName: "play.circle")!, name: "Видеоурок \"Основы Backend-разработки и инструменты разработчика\"", type: "Видео"),
-            LessonItem(image: UIImage(systemName: "doc.text")!, name: "Учебный материал \"Основы Backend-разработки\"", type: "Презентация"),
-            LessonItem(image: UIImage(systemName: "questionmark.bubble.fill")!, name: "Прохождение теста по \"Установка Java Development Kit (JDK)\"", type: "Test"),
-        ]
-    
-    override func viewDidLoad() {
+        var module: CourseModule?
+        var lessonItems: [LessonItem] = []
+
+        override func viewDidLoad() {
             super.viewDidLoad()
             
             tableView.dataSource = self
             tableView.delegate = self
             tableView.register(UINib(nibName: "CompletingTableViewCell", bundle: nil), forCellReuseIdentifier: "CompletingTableViewCell")
             updateUI()
+            if let module = module {
+                populateLessonsAndTests(from: module)
+            }
         }
-    
-    func updateUI(){
-        desctiptionField.isEditable = false
-        desctiptionField.isSelectable = true
-        desctiptionField.isUserInteractionEnabled = true
         
-        description2Field.isEditable = false
-        description2Field.isSelectable = true
-        description2Field.isUserInteractionEnabled = true
+        func updateUI(){
+            desctiptionField.isEditable = false
+            desctiptionField.isSelectable = true
+            desctiptionField.isUserInteractionEnabled = true
+            
+            description2Field.isEditable = false
+            description2Field.isSelectable = true
+            description2Field.isUserInteractionEnabled = true
 
-        if let gradientColor = UIView.createGradientBackground() {
-            sectionNameLabel.textColor = gradientColor
+            if let gradientColor = UIView.createGradientBackground() {
+                sectionNameLabel.textColor = gradientColor
+            }
+            Desctiption1Label.text = "course_objectives".localized
+            description2Label.text = "what_will_you_learn".localized
+            LessonContainsLAbel.text = "lesson_contains".localized
         }
-        Desctiption1Label.text = "course_objectives".localized
-        description2Label.text = "what_will_you_learn".localized
-        LessonContainsLAbel.text = "lesson_contains".localized
-    }
+        
+        func populateLessonsAndTests(from module: CourseModule) {
+            sectionNameLabel.text = module.title
+            
+            // Creating descriptions for lessons and tests
+            let lessonsDescription = module.lessons.map { lesson in
+                return "\(lesson.title) (\(lesson.contentType))"
+            }.joined(separator: "\n")
+            
+            let testDescription = module.moduleTest?.testName ?? "No test available"
+            
+            // Setting text fields with the details
+            desctiptionField.text = "Lessons:\n\(lessonsDescription)"
+            description2Field.text = "Test:\n\(testDescription)"
+            
+            // Convert lessons from CourseModule to LessonItem format for displaying in tableView
+            lessonItems = module.lessons.map { lesson in
+                let lessonType = lesson.contentType == "video" ? "Видео" : "Презентация"
+                let image = lesson.contentType == "video" ? UIImage(systemName: "play.circle")! : UIImage(systemName: "doc.text")!
+                return LessonItem(image: image, name: lesson.title, type: lessonType, fileKey: lesson.fileKey)
+            }
+            
+            // Add tests from CourseModule to lessonItems
+            if let moduleTest = module.moduleTest {
+                let testImage = UIImage(systemName: "questionmark.bubble.fill")!
+                let testItem = LessonItem(image: testImage, name: moduleTest.testName ?? "", type: "Test", fileKey: nil)
+                lessonItems.append(testItem)
+            }
+            
+            tableView.reloadData()
+        }
     }
 
     extension CompletingViewController: UITableViewDataSource, UITableViewDelegate {
@@ -72,12 +103,20 @@ class CompletingViewController: UIViewController {
         }
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            // Instantiate and navigate to the CompletingViewController
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let completingVC = storyboard.instantiateViewController(withIdentifier: "QuizVC") as? QuizVC {
-                // Pass any data to CompletingViewController if needed
-                // completingVC.someProperty = chapters[indexPath.row]
-                navigationController?.pushViewController(completingVC, animated: true)
+            let selectedItem = lessonItems[indexPath.row]
+            
+            if selectedItem.type == "Test", let moduleTest = module?.moduleTest {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                if let quizVC = storyboard.instantiateViewController(withIdentifier: "QuizVC") as? QuizVC {
+                    quizVC.testID = moduleTest.id // Pass the test ID to QuizVC
+                    navigationController?.pushViewController(quizVC, animated: true)
+                }
+            } else if selectedItem.type == "Презентация", let fileKey = selectedItem.fileKey {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                if let learningProcessVC = storyboard.instantiateViewController(withIdentifier: "LearningProcessVC") as? LearningProcessVC {
+                    learningProcessVC.fileKey = fileKey
+                    navigationController?.pushViewController(learningProcessVC, animated: true)
+                }
             }
         }
     }

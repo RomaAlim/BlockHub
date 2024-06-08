@@ -57,7 +57,15 @@ class CoursesTableViewCell: UITableViewCell {
             
             costListCourses.textColor = .link
             registrationButton.setTitleColor(.link, for: .normal)
-            registrationButton.titleLabel?.text = "registration_course".localized
+            registrationButton.setTitle("Details".localized, for: .normal)
+        
+        // Округление углов для descriptionListCourses1
+         descriptionListCourses1.layer.cornerRadius = 15
+         descriptionListCourses1.layer.masksToBounds = true
+
+         // Округление углов для descriptionListCourses2
+         descriptionListCourses2.layer.cornerRadius = 15
+         descriptionListCourses2.layer.masksToBounds = true
         }
         
     }

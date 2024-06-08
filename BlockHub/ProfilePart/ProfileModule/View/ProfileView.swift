@@ -26,6 +26,12 @@ class ProfileView: UIViewController {
         updateUI()
         displayUserData()
         fetchProfileImage()
+        // Hide the back button
+              self.navigationItem.hidesBackButton = true
+              
+              // Alternatively, use a custom empty back button
+              let emptyButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+              self.navigationItem.leftBarButtonItem = emptyButton
     }
     
     func updateUI(){
