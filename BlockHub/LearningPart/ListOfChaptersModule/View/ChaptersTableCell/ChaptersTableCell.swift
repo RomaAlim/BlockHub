@@ -35,7 +35,7 @@ class ChaptersTableCell: UITableViewCell {
         ViewCornerUI.layer.masksToBounds = true
     
             chapterTitleUI.textColor = .link
-        
+        progressTextUI.text = "in_progress".localized
 
     }
 }

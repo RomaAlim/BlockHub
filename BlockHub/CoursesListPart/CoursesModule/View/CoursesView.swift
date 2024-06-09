@@ -23,10 +23,18 @@ class CoursesView: UIViewController, CoursesTableDelegate {
            
        }
        
-       override func viewWillAppear(_ animated: Bool) {
-           super.viewWillAppear(animated)
-           fetchCourses()
-       }
+      
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchCourses()
+        navigationItem.hidesBackButton = true
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
        
        private func loadCourses() {
            if let cachedCourses = CourseService.shared.loadCoursesFromUserDefaults() {

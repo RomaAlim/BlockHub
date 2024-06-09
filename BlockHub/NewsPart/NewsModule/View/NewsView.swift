@@ -26,6 +26,13 @@ class NewsView: UIViewController{
             fetchNews()
         }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Возвращаем стандартную кнопку "Back"
+        navigationItem.hidesBackButton = false
+    }
+
         func updateUI() {
             let backButton = UIBarButtonItem()
             backButton.title = ""
@@ -64,17 +71,19 @@ class NewsView: UIViewController{
             }
         }
 
-        private func formatDate(_ dateString: String) -> String {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-            
-            if let date = dateFormatter.date(from: dateString) {
-                dateFormatter.dateFormat = "yyyy-MM-dd"
-                return dateFormatter.string(from: date)
-            }
-            
-            return dateString
+    private func formatDate(_ dateString: String) -> String {
+        let inputDateFormatter = DateFormatter()
+        inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS"
+        
+        if let date = inputDateFormatter.date(from: dateString) {
+            let outputDateFormatter = DateFormatter()
+            outputDateFormatter.dateFormat = "yyyy-MM-dd"
+            return outputDateFormatter.string(from: date)
         }
+        
+        return dateString
+    }
+
     }
 
     extension NewsView: UITableViewDataSource, UITableViewDelegate {
@@ -112,13 +121,21 @@ class NewsView: UIViewController{
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let selectedNewsVC = storyboard.instantiateViewController(withIdentifier: "SelectedNewsVC") as? SelectedNewsVC {
-                //selectedNewsVC.newsItem = newsItem
+                selectedNewsVC.newsId = newsItem.id
                 navigationController?.pushViewController(selectedNewsVC, animated: true)
             }
         }
 
+
+       
         override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
             tableView.reloadData()
+            navigationItem.hidesBackButton = true
+            super.viewWillAppear(animated)
+            navigationItem.hidesBackButton = true
+            let emptyBackButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            navigationItem.leftBarButtonItem = emptyBackButton
         }
+
     }

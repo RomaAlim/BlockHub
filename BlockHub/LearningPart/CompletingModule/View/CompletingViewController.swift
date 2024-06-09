@@ -10,15 +10,11 @@ import UIKit
 class CompletingViewController: UIViewController {
 
     @IBOutlet weak var sectionNameLabel: UILabel!
-    @IBOutlet weak var Desctiption1Label: UILabel!
-    @IBOutlet weak var description2Label: UILabel!
-    @IBOutlet weak var desctiptionField: UITextView!
-    @IBOutlet weak var description2Field: UITextView!
     @IBOutlet weak var LessonContainsLAbel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     
-        var module: CourseModule?
+    var module: CourseModule?
         var lessonItems: [LessonItem] = []
 
         override func viewDidLoad() {
@@ -33,36 +29,12 @@ class CompletingViewController: UIViewController {
             }
         }
         
-        func updateUI(){
-            desctiptionField.isEditable = false
-            desctiptionField.isSelectable = true
-            desctiptionField.isUserInteractionEnabled = true
-            
-            description2Field.isEditable = false
-            description2Field.isSelectable = true
-            description2Field.isUserInteractionEnabled = true
-
-            if let gradientColor = UIView.createGradientBackground() {
-                sectionNameLabel.textColor = gradientColor
-            }
-            Desctiption1Label.text = "course_objectives".localized
-            description2Label.text = "what_will_you_learn".localized
+        func updateUI() {
             LessonContainsLAbel.text = "lesson_contains".localized
         }
         
         func populateLessonsAndTests(from module: CourseModule) {
             sectionNameLabel.text = module.title
-            
-            // Creating descriptions for lessons and tests
-            let lessonsDescription = module.lessons.map { lesson in
-                return "\(lesson.title) (\(lesson.contentType))"
-            }.joined(separator: "\n")
-            
-            let testDescription = module.moduleTest?.testName ?? "No test available"
-            
-            // Setting text fields with the details
-            desctiptionField.text = "Lessons:\n\(lessonsDescription)"
-            description2Field.text = "Test:\n\(testDescription)"
             
             // Convert lessons from CourseModule to LessonItem format for displaying in tableView
             lessonItems = module.lessons.map { lesson in
@@ -74,7 +46,7 @@ class CompletingViewController: UIViewController {
             // Add tests from CourseModule to lessonItems
             if let moduleTest = module.moduleTest {
                 let testImage = UIImage(systemName: "questionmark.bubble.fill")!
-                let testItem = LessonItem(image: testImage, name: moduleTest.testName ?? "", type: "Test", fileKey: nil)
+                let testItem = LessonItem(image: testImage, name: moduleTest.testName, type: "Test", fileKey: nil)
                 lessonItems.append(testItem)
             }
             

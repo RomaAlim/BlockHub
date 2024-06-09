@@ -38,8 +38,8 @@ class MainMenuView: UIViewController {
     }
     
     func updateUI(){
-        fieldViewCorner.layer.cornerRadius = 10
-        computerViewCorner.layer.cornerRadius = 10
+        fieldViewCorner.layer.cornerRadius = 20
+        computerViewCorner.layer.cornerRadius = 20
         signInButtonUI.layer.cornerRadius = 10
         sendButtonUI.layer.cornerRadius = 10
     }

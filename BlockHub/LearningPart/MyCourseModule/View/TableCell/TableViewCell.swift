@@ -45,9 +45,7 @@ class TableViewCell: UITableViewCell {
            NextButton.clipsToBounds = true
            CourseInformation.clipsToBounds = true
            
-           if let gradientColor = UIView.createGradientBackground() {
-               NextButton.backgroundColor = gradientColor
-           }
+        NextButton.backgroundColor = .link
            
            NextButton.setTitle("continue".localized, for: .normal)
            CourseInformation.setTitle("course_information".localized, for: .normal)

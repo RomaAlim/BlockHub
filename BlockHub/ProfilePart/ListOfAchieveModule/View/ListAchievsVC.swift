@@ -28,19 +28,16 @@ class ListAchievsVC: UIViewController {
             updateUI()
             fetchProfileImage()
             displayUserData()
-            if let gradientColor = UIView.createGradientBackground() {
-                self.view.backgroundColor = gradientColor
-            }
+            self.view.backgroundColor = .link
         }
-        
+    
         override func viewDidLayoutSubviews() {
             super.viewDidLayoutSubviews()
             personImageView.layer.cornerRadius = personImageView.frame.size.width / 2
+            personImageView.clipsToBounds = true
         }
         
         func updateUI(){
-            personImageView.layer.cornerRadius = personImageView.frame.size.width / 2
-            personImageView.clipsToBounds = true
             achiveTextLabel.text = "achievements".localized
         }
         
@@ -131,8 +128,7 @@ class ListAchievsVC: UIViewController {
             cell.achieveNameLabel.text = certificate.courseName
             cell.achieveDescriptionLabel.text = "Certificate"
             cell.achiveImageView.image = UIImage(systemName: "doc.text")
-            cell.achiveImageView.layer.cornerRadius = cell.achiveImageView.frame.size.width / 2
-            cell.achiveImageView.clipsToBounds = true
+            cell.achiveImageView.tintColor = .black
             
             return cell
         }

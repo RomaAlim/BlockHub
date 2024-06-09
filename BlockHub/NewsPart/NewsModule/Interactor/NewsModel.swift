@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct News: Codable {
+struct News: Codable{
     let id: Int
     let title: String
     let subtitle: String
     let content: String
     let datePublished: String
+    let imageKey: String
 }

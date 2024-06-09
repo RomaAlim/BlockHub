@@ -27,8 +27,8 @@
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress 5/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjD-we-vm6" customClass="GradientLabel" customModule="BlockHub" customModuleProvider="target">
-                                <rect key="frame" x="136" y="102" width="88" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Не пройдено" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjD-we-vm6" customClass="GradientLabel" customModule="BlockHub" customModuleProvider="target">
+                                <rect key="frame" x="48" y="102" width="273" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -37,11 +37,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="eet-ax-0sP" secondAttribute="trailing" constant="20" id="2Cu-oO-bJr"/>
-                            <constraint firstAttribute="trailing" secondItem="RjD-we-vm6" secondAttribute="trailing" constant="136" id="T5c-nA-IFY"/>
+                            <constraint firstAttribute="trailing" secondItem="RjD-we-vm6" secondAttribute="trailing" constant="39" id="T5c-nA-IFY"/>
                             <constraint firstItem="eet-ax-0sP" firstAttribute="leading" secondItem="cAr-ox-xru" secondAttribute="leading" constant="20" id="XEd-Y1-Bl6"/>
                             <constraint firstItem="eet-ax-0sP" firstAttribute="top" secondItem="cAr-ox-xru" secondAttribute="top" constant="10" id="cWD-Yj-9IX"/>
                             <constraint firstItem="RjD-we-vm6" firstAttribute="top" secondItem="eet-ax-0sP" secondAttribute="bottom" constant="5" id="h9j-98-aCo"/>
-                            <constraint firstItem="RjD-we-vm6" firstAttribute="leading" secondItem="cAr-ox-xru" secondAttribute="leading" constant="136" id="hQN-P8-Icx"/>
+                            <constraint firstItem="RjD-we-vm6" firstAttribute="leading" secondItem="cAr-ox-xru" secondAttribute="leading" constant="48" id="hQN-P8-Icx"/>
                             <constraint firstAttribute="bottom" secondItem="RjD-we-vm6" secondAttribute="bottom" constant="10" id="iTb-bx-Nes"/>
                         </constraints>
                     </view>

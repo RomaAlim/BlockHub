@@ -23,7 +23,17 @@ class MyCourseView: UIViewController {
            updateUI()
            fetchUserCourses()
        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.hidesBackButton = true
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
        func updateUI() {
            let backButton = UIBarButtonItem()
            backButton.title = ""

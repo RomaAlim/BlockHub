@@ -6,34 +6,79 @@
 //
 
 import UIKit
-import PDFKit
 
 class SelectedNewsVC: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupPDFViewNews()
-    }
     
-    private func setupPDFViewNews() {
-            guard let pdfURL = Bundle.main.url(forResource: "testPDF", withExtension: "pdf") else { return }
-            let pdfDocument = PDFDocument(url: pdfURL)
-            
-            let pdfView = PDFView(frame: view.bounds)
-            pdfView.document = pdfDocument
-            pdfView.autoScales = true
-            
-            view.addSubview(pdfView)
-            
-            // Adjust pdfView frame to exclude the area of the navigation bar
-            pdfView.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                pdfView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-                pdfView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                pdfView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                pdfView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-            ])
-        }
-        
+    @IBOutlet weak var nameNewsLabel: UILabel!
+    @IBOutlet weak var subTitleLabel: UILabel!
+    @IBOutlet weak var imageViewNews: UIImageView!
+    @IBOutlet weak var bodyTextTextView: UITextView!
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    var newsId: Int?
+        var newsItem: News?
 
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            fetchNews()
+            updateUI()
+        }
+
+        private func fetchNews() {
+            guard let id = newsId else { return }
+            NewsService.shared.fetchNews(by: id) { result in
+                switch result {
+                case .success(let newsItem):
+                    self.newsItem = newsItem
+                    self.configureView()
+                case .failure(let error):
+                    print("Failed to fetch news:", error)
+                }
+            }
+        }
+
+        private func configureView() {
+            guard let newsItem = newsItem else { return }
+            
+            nameNewsLabel.text = newsItem.title
+            subTitleLabel.text = newsItem.subtitle
+            bodyTextTextView.text = newsItem.content
+            dateLabel.text = formatDate(newsItem.datePublished)
+            
+            if let imageUrl = URL(string: newsItem.imageKey) {
+                loadImage(from: imageUrl) { image in
+                    DispatchQueue.main.async {
+                        self.imageViewNews.image = image
+                    }
+                }
+            }
+        }
+
+        private func formatDate(_ dateString: String) -> String {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            
+            if let date = dateFormatter.date(from: dateString) {
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                return dateFormatter.string(from: date)
+            }
+            
+            return dateString
+        }
+
+        private func loadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                if let data = data, let image = UIImage(data: data) {
+                    completion(image)
+                } else {
+                    completion(nil)
+                }
+            }.resume()
+        }
+   func updateUI(){
+       bodyTextTextView.isEditable = false
+       bodyTextTextView.isSelectable = true
+       bodyTextTextView.isUserInteractionEnabled = true
+    }
     }

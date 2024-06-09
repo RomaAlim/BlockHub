@@ -58,7 +58,6 @@ class AboutCourseView: UIViewController {
         
             registrationButtonUI.backgroundColor = .link
             viewColorEditeted.backgroundColor = .link
-            
         }
 
         func showRegistrationAlert(message: String) {
@@ -99,21 +98,25 @@ class AboutCourseView: UIViewController {
             learningPlanField.text = course.modules.map { $0.title }.joined(separator: "\n")
         }
 
-        func enrollInCourse() {
-            guard let courseID = courseID else {
-                print("Course ID is not available")
-                return
-            }
+    func enrollInCourse() {
+           guard let courseID = courseID else {
+               print("Course ID is not available")
+               return
+           }
 
-            CourseService.shared.enrollInCourse(courseID: courseID) { result in
-                switch result {
-                case .success(let message):
-                    print("Successfully enrolled in course: \(message)")
-                    self.showRegistrationAlert(message: "You have successfully registered for the course. It has been added to your favorites.")
-                case .failure(let error):
-                    print("Failed to enroll in course: \(error)")
-                    self.showRegistrationAlert(message: "Failed to register for the course. Please try again.")
-                }
-            }
-        }
-    }
+           CourseService.shared.enrollInCourse(courseID: courseID) { result in
+               switch result {
+               case .success(let message):
+                   print("Successfully enrolled in course: \(message)")
+                   self.showRegistrationAlert(message: "You have successfully registered for the course. It has been added to your favorites.")
+                   
+                   // Сохранение регистрации курса
+                   CourseManager.shared.saveRegistration(courseId: "\(courseID)")
+                   
+               case .failure(let error):
+                   print("Failed to enroll in course: \(error)")
+                   self.showRegistrationAlert(message: "Failed to register for the course. Please try again.")
+               }
+           }
+       }
+   }

@@ -29,10 +29,8 @@ class ListOfChaptersView: UIViewController {
         }
 
         func updateUI() {
-            if let gradientColor = UIView.createGradientBackground() {
-                self.view.backgroundColor = gradientColor
-                nameOfCourseUI.backgroundColor = gradientColor
-            }
+            self.view.backgroundColor = .link
+            nameOfCourseUI.backgroundColor = .link
         }
 
         func populateModules(from course: Course) {

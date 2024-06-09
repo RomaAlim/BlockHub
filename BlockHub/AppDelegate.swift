@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
             UINavigationBar.appearance().tintColor = .black
             UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
                 if granted {
@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             return true
         }
 
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
             if #available(iOS 14.0, *) {
                 completionHandler([.banner, .list, .sound])
             } else {
@@ -35,20 +35,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             }
         }
 
-        // Обработка уведомлений при нажатии на уведомление
         func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-            // Обработка действия
             completionHandler()
         }
 
         func scheduleDynamicNotifications() {
             let registrations = CourseManager.shared.loadRegistrations()
             for registration in registrations {
-                // Пример уведомления через 3 дня после регистрации
                 let reminderMessage = getRandomMessage(from: NotificationTemplates.newsPush)
                 scheduleNotification(title: "Напоминание", body: reminderMessage, date: Calendar.current.date(byAdding: .day, value: 3, to: registration.registrationDate)!, identifier: "reminder_\(registration.courseId)_3days")
                 
-                // Пример уведомления за день до дедлайна
                 let deadlineMessage = getRandomMessage(from: NotificationTemplates.myCourse)
                 scheduleNotification(title: "Дедлайн", body: deadlineMessage, date: Calendar.current.date(byAdding: .day, value: -1, to: registration.deadlineDate)!, identifier: "reminder_\(registration.courseId)_1day_before_deadline")
             }

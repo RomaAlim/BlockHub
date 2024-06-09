@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpView: UIViewController {
+class SignUpView: UIViewController, UITextFieldDelegate  {
 
     
     @IBOutlet weak var passwordViewCorner: UIView!
@@ -32,8 +32,10 @@ class SignUpView: UIViewController {
         super.viewDidLoad()
         updateLocalizable()
         updateUI()
-        updateUItest()
-    }
+        emailField.delegate = self
+        passwordField.delegate = self
+        fullNameField.delegate = self
+        }
     
 
     @IBAction func googleButtonAction(_ sender: Any) {
@@ -46,6 +48,20 @@ class SignUpView: UIViewController {
                     DispatchQueue.main.async {
                         if success {
                             print("Sign up and sign in successful for user: \(username)")
+                            // Удаление предыдущих данных пользователя
+                            UserDefaults.standard.removeObject(forKey: "savedUsername")
+                            UserDefaults.standard.removeObject(forKey: "savedEmail")
+                            UserDefaults.standard.removeObject(forKey: "savedPassword")
+
+                            // Сохранение новых данных пользователя
+                            UserDefaults.standard.set(username, forKey: "savedUsername")
+                            UserDefaults.standard.set(email, forKey: "savedEmail")
+                            UserDefaults.standard.set(password, forKey: "savedPassword")
+                            
+                            // Добавляем принты для проверки сохраненных данных
+                            print("Saved Username: \(username)")
+                            print("Saved Email: \(email)")
+                            print("Saved Password: \(password)")
                         } else {
                             print("Sign up or sign in failed for user: \(username)")
                             let alert = UIAlertController(title: "Error", message: "Sign up or sign in failed", preferredStyle: .alert)
@@ -56,15 +72,6 @@ class SignUpView: UIViewController {
                 }
     }
 
-            func updateUItest() {
-                // Логирование размеров и позиций элементов
-                print("signUoButton frame: \(signUoButton.frame)")
-                signUoButton.layer.cornerRadius = 10
-                // Проверка на NaN значения
-                if signUoButton.layer.cornerRadius.isNaN {
-                    print("Error: signUoButton.layer.cornerRadius is NaN")
-                }
-            }
     
     @IBAction func signInButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -93,4 +100,10 @@ class SignUpView: UIViewController {
         signInUI.titleLabel?.text = "signin".localized
         
     }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
 }

@@ -23,97 +23,107 @@ class QuizVC: UIViewController {
     @IBOutlet weak var localizedAnswerAnd: UILabel!
     
     
-    var testID: Int? // This will hold the test ID passed from the previous screen
-       var moduleTest: ModuleTest?
-       var questions: [TestQuestion] = []
-       var currentQuestionIndex = 0
-       var selectedAnswerIndex: Int?
-       var correctAnswers = 0
+    var testID: Int?
+        var moduleTest: ModuleTest?
+        var questions: [TestQuestion] = []
+        var currentQuestionIndex = 0
+        var selectedAnswerIndex: Int?
+        var correctAnswers = 0
 
-       override func viewDidLoad() {
-           super.viewDidLoad()
-           print("QuizVC loaded. Fetching test data for testID: \(String(describing: testID))")
-           fetchTestData()
-           updateLocalizable()
-       }
-       
-    func fetchTestData() {
-        guard let testID = testID else {
-            print("Test ID is nil.")
-            return
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            print("QuizVC loaded. Fetching test data for testID: \(String(describing: testID))")
+            fetchTestData()
+            updateLocalizable()
         }
         
-        let urlString = "https://educationplatform-juhi.onrender.com/api/v1/module-tests/\(testID)"
-        print("Fetching test data from URL: \(urlString)")
-        
-        AF.request(urlString).responseDecodable(of: ModuleTest.self) { response in
-            switch response.result {
-            case .success(let test):
-                self.moduleTest = test
-                self.questions = test.questions ?? []
-                if let moduleTest = self.moduleTest {
-                    print("Successfully fetched and decoded test data: \(moduleTest)")
-                } else {
-                    print("Successfully fetched test data but it's nil.")
+        func fetchTestData() {
+            guard let testID = testID else {
+                print("Test ID is nil.")
+                return
+            }
+
+            guard let token = TokenStorageService.shared.getToken() else {
+                print("Token is missing.")
+                return
+            }
+
+            let urlString = "https://educationplatform-juhi.onrender.com/api/v1/module-tests/\(testID)"
+            print("Fetching test data from URL: \(urlString)")
+            
+            let headers: HTTPHeaders = [
+                "Authorization": "Bearer \(token)",
+                "Accept": "application/json"
+            ]
+            
+            AF.request(urlString, headers: headers).responseDecodable(of: ModuleTest.self) { response in
+                switch response.result {
+                case .success(let test):
+                    self.moduleTest = test
+                    self.questions = test.questions
+                    if let moduleTest = self.moduleTest {
+                        print("Successfully fetched and decoded test data: \(moduleTest)")
+                    } else {
+                        print("Successfully fetched test data but it's nil.")
+                    }
+                    self.updateUI()
+                case .failure(let error):
+                    if let data = response.data, let json = try? JSONSerialization.jsonObject(with: data, options: []) {
+                        print("Failed to fetch test data: \(error). Response JSON: \(json)")
+                    } else {
+                        print("Failed to fetch test data: \(error)")
+                    }
                 }
-                self.updateUI()
-            case .failure(let error):
-                print("Failed to fetch test data: \(error)")
             }
         }
-    }
 
-
-    func updateUI() {
-        guard !questions.isEmpty else {
-            print("No questions available to display.")
-            return
+        func updateUI() {
+            guard !questions.isEmpty else {
+                print("No questions available to display.")
+                return
+            }
+            
+            nextButton.setTitle("next".localized, for: .normal)
+            let currentQuestion = questions[currentQuestionIndex]
+            questionLabel.text = currentQuestion.questionText
+            QuestionLabel1.setTitle(currentQuestion.options[0].optionText, for: .normal)
+            QuestionLabel2.setTitle(currentQuestion.options[1].optionText, for: .normal)
+            QuestionLabel3.setTitle(currentQuestion.options[2].optionText, for: .normal)
+            QuestionLabel4.setTitle(currentQuestion.options[3].optionText, for: .normal)
+            
+            // Reset button states
+            resetButtonStates()
+            
+            // Update progress view
+            let progress = Float(currentQuestionIndex + 1) / Float(questions.count)
+            testProgressView.setProgress(progress, animated: true)
+            
+            // Update question number label
+            numberOfQuestion.text = "\("step".localized) \(currentQuestionIndex + 1) \("of".localized) \(questions.count)"
+            
+            // Disable Next button initially
+            nextButton.isEnabled = false
+            nextButton.layer.cornerRadius = 15
+            NoneButton.layer.cornerRadius = 15
+            QuestionLabel1.layer.cornerRadius = 15
+            QuestionLabel2.layer.cornerRadius = 15
+            QuestionLabel3.layer.cornerRadius = 15
+            QuestionLabel4.layer.cornerRadius = 15
+            
+            nextButton.backgroundColor = .link
+            
+            print("Updated UI with question \(currentQuestionIndex + 1) out of \(questions.count)")
         }
-        
-        nextButton.titleLabel?.text = "next".localized
-        let currentQuestion = questions[currentQuestionIndex]
-        questionLabel.text = currentQuestion.questionText
-        QuestionLabel1.setTitle(currentQuestion.options?[0].optionText, for: .normal)
-        QuestionLabel2.setTitle(currentQuestion.options?[1].optionText, for: .normal)
-        QuestionLabel3.setTitle(currentQuestion.options?[2].optionText, for: .normal)
-        QuestionLabel4.setTitle(currentQuestion.options?[3].optionText, for: .normal)
-        
-        // Reset button states
-        resetButtonStates()
-        
-        // Update progress view
-        let progress = Float(currentQuestionIndex + 1) / Float(questions.count)
-        testProgressView.setProgress(progress, animated: true)
-        
-        // Update question number label
-        numberOfQuestion.text = "\("step".localized) \(currentQuestionIndex + 1) \("of".localized) \(questions.count)"
-        
-        // Disable Next button initially
-        nextButton.isEnabled = false
-        nextButton.layer.cornerRadius = 15
-        NoneButton.layer.cornerRadius = 15
-        QuestionLabel1.layer.cornerRadius = 15
-        QuestionLabel2.layer.cornerRadius = 15
-        QuestionLabel3.layer.cornerRadius = 15
-        QuestionLabel4.layer.cornerRadius = 15
-        
-        if let gradientColor = UIView.createGradientBackground() {
-            nextButton.backgroundColor = gradientColor
-        }
-        
-        print("Updated UI with question \(currentQuestionIndex + 1) out of \(questions.count)")
-    }
 
-       
-       func resetButtonStates() {
-           selectedAnswerIndex = nil
-           let buttons = [QuestionLabel1, QuestionLabel2, QuestionLabel3, QuestionLabel4]
-           for button in buttons {
-               button?.backgroundColor = .white
-               button?.layer.borderColor = UIColor.gray.cgColor
-               button?.layer.borderWidth = 1.0
-           }
-       }
+        func resetButtonStates() {
+            selectedAnswerIndex = nil
+            let buttons = [QuestionLabel1, QuestionLabel2, QuestionLabel3, QuestionLabel4]
+            for button in buttons {
+                button?.backgroundColor = .white
+                button?.layer.borderColor = UIColor.gray.cgColor
+                button?.layer.borderWidth = 1.0
+            }
+        }
     
     @IBAction func questionButtonAction1(_ sender: Any) {
         selectAnswer(at: 0)
@@ -141,16 +151,15 @@ class QuizVC: UIViewController {
                
                // Validate the answer
                let currentQuestion = questions[currentQuestionIndex]
-               if currentQuestion.options?[selectedAnswerIndex].isCorrect ?? false {
+        if currentQuestion.options[selectedAnswerIndex].isCorrect {
                    correctAnswers += 1
                }
                
-               // Move to the next question
                currentQuestionIndex += 1
                if currentQuestionIndex < questions.count {
                    updateUI()
                } else {
-                   // Quiz finished
+                   print("Quiz finished. Correct answers: \(correctAnswers) out of \(questions.count)")
                    submitTestResults()
                }
            }
@@ -161,9 +170,7 @@ class QuizVC: UIViewController {
                let buttons = [QuestionLabel1, QuestionLabel2, QuestionLabel3, QuestionLabel4]
                let selectedButton = buttons[index]
                
-               if let gradientColor = UIView.createGradientBackground() {
-                   selectedButton?.backgroundColor = gradientColor
-               }
+               selectedButton?.backgroundColor = .link
                nextButton.isEnabled = true
                
                print("Selected answer at index \(index) for question \(currentQuestionIndex + 1)")
@@ -171,22 +178,32 @@ class QuizVC: UIViewController {
            
            func updateLocalizable() {
                localizedAnswerAnd.text = "answer_get_points".localized
-               nextButton.titleLabel?.text = "next".localized
-               NoneButton.titleLabel?.text = "none".localized
+               nextButton.setTitle("next".localized, for: .normal)
+               NoneButton.setTitle("none".localized, for: .normal)
            }
            
            func submitTestResults() {
                guard let testID = testID else { return }
-               
+
+               guard let token = TokenStorageService.shared.getToken() else {
+                   print("Token is missing.")
+                   return
+               }
+
                let urlString = "https://educationplatform-juhi.onrender.com/api/v1/module-tests/\(testID)"
                let parameters: [String: Any] = [
                    "score": correctAnswers,
                    "totalQuestions": questions.count
                ]
-               
+
+               let headers: HTTPHeaders = [
+                   "Authorization": "Bearer \(token)",
+                   "Content-Type": "application/json"
+               ]
+
                print("Submitting test results with parameters: \(parameters) to URL: \(urlString)")
-               
-               AF.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default).response { response in
+
+               AF.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).response { response in
                    switch response.result {
                    case .success:
                        print("Successfully submitted test results.")

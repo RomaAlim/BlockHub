@@ -14,7 +14,6 @@ struct CourseRegistration: Codable {
     var completionDate: Date?
 }
 
-
 class CourseManager {
     static let shared = CourseManager()
 
@@ -43,7 +42,6 @@ class CourseManager {
         UserDefaults.standard.removeObject(forKey: "courseRegistrations")
     }
 
-    // Измените уровень доступа на internal или public
     internal func saveRegistrations(_ registrations: [CourseRegistration]) {
         guard let data = try? JSONEncoder().encode(registrations) else { return }
         UserDefaults.standard.set(data, forKey: "courseRegistrations")
