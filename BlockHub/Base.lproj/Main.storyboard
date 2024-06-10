@@ -752,6 +752,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="signInGoogleAction:" destination="BkU-vV-SNM" eventType="touchUpInside" id="JVw-tS-kux"/>
+                                    <segue destination="1R4-jX-zPC" kind="showDetail" id="cbN-KD-gx5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNh-ip-BQM">
@@ -831,7 +832,7 @@
         <!--Courses-->
         <scene sceneID="ffn-l5-dEk">
             <objects>
-                <viewController id="bjy-PK-1dp" customClass="CoursesView" customModule="BlockHub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CoursesView" id="bjy-PK-1dp" customClass="CoursesView" customModule="BlockHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3tp-Mb-tWh">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -897,7 +898,6 @@
                         <segue destination="bjy-PK-1dp" kind="relationship" relationship="viewControllers" id="XsL-TM-HQt"/>
                         <segue destination="qwK-Nv-OxY" kind="relationship" relationship="viewControllers" id="Y9n-xq-bYQ"/>
                         <segue destination="wg2-Ix-ltW" kind="relationship" relationship="viewControllers" id="DpH-FB-aV9"/>
-                        <segue destination="1R4-jX-zPC" kind="relationship" relationship="viewControllers" id="NfN-TV-y8o"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WD2-bW-ach" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -968,14 +968,17 @@
         <!--News-->
         <scene sceneID="nYe-kh-uic">
             <objects>
-                <viewController id="YPm-ai-ZgM" customClass="NewsView" customModule="BlockHub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsView" id="YPm-ai-ZgM" customClass="NewsView" customModule="BlockHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OIS-Fg-IHr">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="E9y-1u-Uzl">
-                                <rect key="frame" x="0.0" y="153" width="390" height="608"/>
+                                <rect key="frame" x="0.0" y="144" width="390" height="617"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="390" id="Gof-Hx-evM"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsTableViewCell" id="xwP-m1-aqJ">
                                         <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
@@ -988,33 +991,21 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BlockHub News" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thp-os-Xrz">
-                                <rect key="frame" x="0.0" y="108" width="390" height="37"/>
+                                <rect key="frame" x="49" y="87" width="292" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="LZD-os-3RY">
-                                <rect key="frame" x="0.0" y="64" width="390" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="iMn-D9-vek"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yjf-Ni-fe5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Thp-os-Xrz" firstAttribute="leading" secondItem="Yjf-Ni-fe5" secondAttribute="leading" id="76x-9d-0pK"/>
-                            <constraint firstItem="LZD-os-3RY" firstAttribute="centerX" secondItem="OIS-Fg-IHr" secondAttribute="centerX" id="CUS-U1-T5a"/>
-                            <constraint firstItem="Thp-os-Xrz" firstAttribute="top" secondItem="LZD-os-3RY" secondAttribute="bottom" id="Gdy-Qk-G1c"/>
-                            <constraint firstItem="Thp-os-Xrz" firstAttribute="leading" secondItem="LZD-os-3RY" secondAttribute="leading" id="JmL-zt-uI2"/>
-                            <constraint firstItem="Thp-os-Xrz" firstAttribute="leading" secondItem="E9y-1u-Uzl" secondAttribute="leading" id="Kws-DY-H6M"/>
-                            <constraint firstItem="E9y-1u-Uzl" firstAttribute="top" secondItem="LZD-os-3RY" secondAttribute="bottom" constant="45" id="OpS-Fg-IX3"/>
-                            <constraint firstItem="Thp-os-Xrz" firstAttribute="trailing" secondItem="E9y-1u-Uzl" secondAttribute="trailing" id="Roc-Ts-ZBN"/>
+                            <constraint firstItem="Thp-os-Xrz" firstAttribute="leading" secondItem="Yjf-Ni-fe5" secondAttribute="leading" constant="49" id="76x-9d-0pK"/>
+                            <constraint firstItem="Thp-os-Xrz" firstAttribute="leading" secondItem="E9y-1u-Uzl" secondAttribute="leading" constant="49" id="Kws-DY-H6M"/>
+                            <constraint firstItem="Thp-os-Xrz" firstAttribute="trailing" secondItem="E9y-1u-Uzl" secondAttribute="trailing" constant="-49" id="Roc-Ts-ZBN"/>
                             <constraint firstItem="E9y-1u-Uzl" firstAttribute="bottom" secondItem="Yjf-Ni-fe5" secondAttribute="bottom" id="V2J-nP-7vW"/>
-                            <constraint firstItem="Yjf-Ni-fe5" firstAttribute="bottom" secondItem="Thp-os-Xrz" secondAttribute="bottom" constant="616" id="VKY-fV-4tY"/>
-                            <constraint firstItem="LZD-os-3RY" firstAttribute="top" secondItem="OIS-Fg-IHr" secondAttribute="topMargin" constant="17" id="seC-zu-niP"/>
-                            <constraint firstItem="Thp-os-Xrz" firstAttribute="trailing" secondItem="LZD-os-3RY" secondAttribute="trailing" id="wI7-wf-Szv"/>
+                            <constraint firstItem="Yjf-Ni-fe5" firstAttribute="bottom" secondItem="Thp-os-Xrz" secondAttribute="bottom" constant="644" id="VKY-fV-4tY"/>
+                            <constraint firstItem="E9y-1u-Uzl" firstAttribute="top" secondItem="Thp-os-Xrz" secondAttribute="bottom" constant="27" id="sp2-Ed-Y73"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="News" image="newspaper.fill" catalog="system" id="YXL-Xb-kNY">
@@ -1022,14 +1013,13 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="voA-AQ-AZL"/>
                     <connections>
-                        <outlet property="NewsSearchBar" destination="LZD-os-3RY" id="2E3-hJ-r0T"/>
                         <outlet property="NewstextLabel" destination="Thp-os-Xrz" id="Onv-Xb-LkG"/>
                         <outlet property="tableView" destination="E9y-1u-Uzl" id="WQX-zB-m0l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahw-iK-haT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1431" y="763"/>
+            <point key="canvasLocation" x="1430.7692307692307" y="762.79620853080564"/>
         </scene>
         <!--Selected NewsVC-->
         <scene sceneID="p7L-yO-95C">
@@ -1867,11 +1857,11 @@
             <objects>
                 <viewController id="1R4-jX-zPC" customClass="TestVC" customModule="BlockHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5PU-lG-1rJ">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYw-YG-Bi4">
-                                <rect key="frame" x="159" y="481" width="75" height="35"/>
+                                <rect key="frame" x="159" y="554" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Delete"/>
                                 <connections>
@@ -1879,7 +1869,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MA4-1j-xh7">
-                                <rect key="frame" x="143" y="263" width="66" height="35"/>
+                                <rect key="frame" x="143" y="216" width="66" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Show"/>
                                 <connections>
@@ -1887,13 +1877,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vu-PJ-t6M">
-                                <rect key="frame" x="84" y="328" width="270" height="138"/>
+                                <rect key="frame" x="84" y="281" width="270" height="258"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdC-0R-8WO">
-                                <rect key="frame" x="112" y="76" width="186" height="35"/>
+                                <rect key="frame" x="112" y="29" width="186" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="TestNewsNotification"/>
                                 <connections>
@@ -1901,7 +1891,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpZ-ak-4Ek">
-                                <rect key="frame" x="133" y="127" width="144" height="35"/>
+                                <rect key="frame" x="133" y="80" width="144" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="TestNewXourse"/>
                                 <connections>
@@ -1909,7 +1899,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFB-F2-Vif">
-                                <rect key="frame" x="131" y="170" width="131" height="35"/>
+                                <rect key="frame" x="131" y="123" width="131" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Testmycourse"/>
                                 <connections>
@@ -1917,7 +1907,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eim-AQ-ZIa">
-                                <rect key="frame" x="141.66666666666666" y="205" width="110" height="35"/>
+                                <rect key="frame" x="141.66666666666666" y="158" width="110" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Testupdate"/>
                                 <connections>

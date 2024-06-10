@@ -21,7 +21,6 @@
 		3A27B3182C0E937100E6B297 /* ChaptersTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27B3162C0E937100E6B297 /* ChaptersTableCell.swift */; };
 		3A27B3192C0E937100E6B297 /* ChaptersTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A27B3172C0E937100E6B297 /* ChaptersTableCell.xib */; };
 		3A696EB82C166C3C00A1AAE9 /* NotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A696EB72C166C3C00A1AAE9 /* NotificationTests.swift */; };
-		3A696EBA2C1675B200A1AAE9 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A696EB92C1675B200A1AAE9 /* MainTabBarController.swift */; };
 		3A6B07822C15F3AC00D86DED /* FaceIDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B07812C15F3AC00D86DED /* FaceIDService.swift */; };
 		3A77CB6C2C0A02B700BFEACC /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A77CB6B2C0A02B700BFEACC /* NewsView.swift */; };
 		3A77CB6E2C0A02CB00BFEACC /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A77CB6D2C0A02CB00BFEACC /* CoursesView.swift */; };
@@ -111,7 +110,6 @@
 		3A27B3162C0E937100E6B297 /* ChaptersTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersTableCell.swift; sourceTree = "<group>"; };
 		3A27B3172C0E937100E6B297 /* ChaptersTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChaptersTableCell.xib; sourceTree = "<group>"; };
 		3A696EB72C166C3C00A1AAE9 /* NotificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTests.swift; sourceTree = "<group>"; };
-		3A696EB92C1675B200A1AAE9 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		3A6B07812C15F3AC00D86DED /* FaceIDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDService.swift; sourceTree = "<group>"; };
 		3A77CB6B2C0A02B700BFEACC /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		3A77CB6D2C0A02CB00BFEACC /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
@@ -431,7 +429,6 @@
 			children = (
 				3A7B796A2C125EDC0064E325 /* TestVCViewController.swift */,
 				3ACF634D2C13285E00CA24F2 /* notificationModel.swift */,
-				3A696EB92C1675B200A1AAE9 /* MainTabBarController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1541,7 +1538,6 @@
 				3A1A7D282BDF1145008D5160 /* LogInRouter.swift in Sources */,
 				3A7B796F2C1262FD0064E325 /* DateUserDefault.swift in Sources */,
 				3A909A322BDEE32C00D824A9 /* BlockHub.xcdatamodeld in Sources */,
-				3A696EBA2C1675B200A1AAE9 /* MainTabBarController.swift in Sources */,
 				3A27B3042C0E8D0A00E6B297 /* EntutyMyCourse.swift in Sources */,
 				3A77CB792C0A142900BFEACC /* SignUpView.swift in Sources */,
 				3A77CB702C0A032900BFEACC /* MyCourseView.swift in Sources */,

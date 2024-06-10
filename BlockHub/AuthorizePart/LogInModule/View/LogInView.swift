@@ -51,12 +51,8 @@ class LogInView: UIViewController, LogInViewInput, UITextFieldDelegate  {
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     if let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabbar") as? UITabBarController {
                         mainTabBarController.selectedIndex = 0
-    
-                        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-                            if let window = scene.windows.first {
-                                window.rootViewController = mainTabBarController
-                                UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil, completion: nil)
-                            }
+                        if let navigationController = self.navigationController {
+                            navigationController.pushViewController(mainTabBarController, animated: true)
                         }
                     }
                 } else {
@@ -102,33 +98,28 @@ class LogInView: UIViewController, LogInViewInput, UITextFieldDelegate  {
                 }
             }
             
-    func signInWithFaceID(username: String, password: String) {
-        AuthService.shared.signIn(username: username, password: password) { success in
-            DispatchQueue.main.async {
-                if success {
-                    print("Sign in successful for user: \(username)")
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    if let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabbar") as? UITabBarController {
-                        mainTabBarController.selectedIndex = 0
-                        
-                        // Используем актуальный API для iOS 15 и новее
-                        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-                            if let window = scene.windows.first {
-                                window.rootViewController = mainTabBarController
-                                UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil, completion: nil)
+            func signInWithFaceID(username: String, password: String) {
+                AuthService.shared.signIn(username: username, password: password) { success in
+                    DispatchQueue.main.async {
+                        if success {
+                            print("Sign in successful for user: \(username)")
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            if let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabbar") as? UITabBarController {
+                                mainTabBarController.selectedIndex = 0
+                                if let navigationController = self.navigationController {
+                                    navigationController.pushViewController(mainTabBarController, animated: true)
+                                }
                             }
+                            
+                        } else {
+                            print("Sign in failed for user: \(username)")
+                            let alert = UIAlertController(title: "Error", message: "Sign in failed", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
                         }
                     }
-                } else {
-                    print("Sign in failed for user: \(username)")
-                    let alert = UIAlertController(title: "Error", message: "Sign in failed", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
                 }
             }
-        }
-    }
-
            
            func updateUI() {
                signInGoogleButtonUI.layer.cornerRadius = 10
