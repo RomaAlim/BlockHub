@@ -617,7 +617,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0A-m4-1fc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0A-m4-1fc">
                                 <rect key="frame" x="56" y="414" width="276" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="7Kf-7M-DbE"/>
@@ -634,7 +634,7 @@
                                         <rect key="frame" x="13.66666666666667" y="7.6666666666666679" width="24.333333333333329" height="35"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Rama" borderStyle="roundedRect" placeholder="YourEmail@test.com" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="TGc-bS-s5B">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="TGc-bS-s5B">
                                         <rect key="frame" x="51" y="8" width="240" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="uRN-QV-dgT"/>
@@ -670,7 +670,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2P-5x-MJR">
                                 <rect key="frame" x="51" y="525" width="305" height="46"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Rama222@" borderStyle="roundedRect" placeholder="****************" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ast-DQ-fxf">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="****************" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ast-DQ-fxf">
                                         <rect key="frame" x="52" y="7" width="233" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="233" id="6fV-wC-Q2v"/>
@@ -752,7 +752,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="signInGoogleAction:" destination="BkU-vV-SNM" eventType="touchUpInside" id="JVw-tS-kux"/>
-                                    <segue destination="1R4-jX-zPC" kind="showDetail" id="cbN-KD-gx5"/>
+                                    <segue destination="1R4-jX-zPC" kind="show" id="QhC-VO-0vW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNh-ip-BQM">
@@ -1857,11 +1857,11 @@
             <objects>
                 <viewController id="1R4-jX-zPC" customClass="TestVC" customModule="BlockHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5PU-lG-1rJ">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYw-YG-Bi4">
-                                <rect key="frame" x="159" y="554" width="75" height="35"/>
+                                <rect key="frame" x="159" y="530" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Delete"/>
                                 <connections>
@@ -1869,7 +1869,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MA4-1j-xh7">
-                                <rect key="frame" x="143" y="216" width="66" height="35"/>
+                                <rect key="frame" x="143" y="307" width="66" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Show"/>
                                 <connections>
@@ -1877,13 +1877,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vu-PJ-t6M">
-                                <rect key="frame" x="84" y="281" width="270" height="258"/>
+                                <rect key="frame" x="84" y="372" width="270" height="143"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdC-0R-8WO">
-                                <rect key="frame" x="112" y="29" width="186" height="35"/>
+                                <rect key="frame" x="112" y="120" width="186" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="TestNewsNotification"/>
                                 <connections>
@@ -1891,7 +1891,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpZ-ak-4Ek">
-                                <rect key="frame" x="133" y="80" width="144" height="35"/>
+                                <rect key="frame" x="133" y="171" width="144" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="TestNewXourse"/>
                                 <connections>
@@ -1899,7 +1899,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFB-F2-Vif">
-                                <rect key="frame" x="131" y="123" width="131" height="35"/>
+                                <rect key="frame" x="131" y="214" width="131" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Testmycourse"/>
                                 <connections>
@@ -1907,7 +1907,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eim-AQ-ZIa">
-                                <rect key="frame" x="141.66666666666666" y="158" width="110" height="35"/>
+                                <rect key="frame" x="141.66666666666666" y="249" width="110" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Testupdate"/>
                                 <connections>

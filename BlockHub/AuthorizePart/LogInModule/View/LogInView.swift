@@ -133,7 +133,7 @@ class LogInView: UIViewController, LogInViewInput, UITextFieldDelegate  {
                signInGoogleButtonUI.titleLabel?.text = "signin_google".localized
                welcometoLabel.text = "welcome".localized
                signinyouremailLabel.text = "signin_email".localized
-               emailLabel.text = "email".localized
+               emailLabel.text = "UserName".localized
                passwordLabel.text = "password".localized
                signUoButtonUI.titleLabel?.text = "signup".localized
            }
